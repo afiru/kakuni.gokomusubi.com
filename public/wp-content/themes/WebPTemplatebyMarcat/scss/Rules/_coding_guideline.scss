@@ -1,0 +1,96 @@
+/* ==========================================================================
+use＆nameSpace
+========================================================================== */
+@use "../Functions/mixin"as mi;
+
+/* ==========================================================================
+Rules
+========================================================================== */
+body {
+    -webkit-font-smoothing: antialiased;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.05s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+body img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    @include mi.mq(sp) {
+        width: 100%;
+    }
+}
+
+ul,
+li,
+dd,
+dt,
+dh {
+    list-style: none;
+}
+
+svg {
+    display: block;
+}
+
+.tj {
+    text-indent: -9999px;
+    text-align: left;
+    overflow: hidden;
+    display: block;
+    font-size: 0.1em;
+}
+
+.wapper {
+    @include mi.wapSettings;
+}
+
+.pc_only {
+    display: block;
+
+    @include mi.mq(sp) {
+        display: none;
+    }
+}
+
+.sp_only {
+    display: none;
+
+    @include mi.mq(sp) {
+        display: block;
+    }
+}
+
+@for $i from 0 through 12 {
+    .pc_order_#{$i} {
+        order: $i;
+
+        @include mi.mq(sp) {
+            order: unset;
+        }
+    }
+
+    .fw_#{$i*100} {
+        font-weight: $i*100;
+    }
+}
+
+.ovhidden {
+    overflow: hidden;
+}
+
+a {
+    transition-duration: 0.5s;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
