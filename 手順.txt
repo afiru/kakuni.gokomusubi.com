@@ -26,3 +26,4 @@
 9.dbだけを持ってくるコマンドを打つ
 　wordmove pull --db
 
+--
