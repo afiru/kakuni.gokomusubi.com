@@ -1,0 +1,31 @@
+#!/bin/sh
+#Please enter your passphrase
+PASS='sunplads9333'
+
+expect -v 2> /dev/null
+if [ $? -ne 0 ] ; then
+  apt-get update -y
+  apt-get install -y expect
+fi
+
+eval "$(ssh-agent)"
+expect -c "
+spawn ssh-add /home/.ssh/id_rsa
+expect \"Enter passphrase for /home/.ssh/id_rsa:\"
+send \"${PASS}\n\"
+interact
+"
+
+echo "--------------------------------"
+echo -n "Themes folder upload? [y/n]: "
+
+read ANS
+
+case $ANS in
+   [Yy]* )
+    wordmove push -t
+    ;;
+  * )
+    echo "abort"
+    ;;
+esac

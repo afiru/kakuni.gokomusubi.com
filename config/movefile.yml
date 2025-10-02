@@ -1,0 +1,51 @@
+global:
+  sql_adapter: default
+
+local:
+  vhost: "<%= ENV['LOCAL_URL'] %>"
+  wordpress_path: "/var/www/html<%= ENV['WP_WORKING_DIR'] %>"
+  database:
+    name: "wordpress"
+    user: "root"
+    password: "wordpress"
+    host: "database"
+    mysqldump_options: "--default-character-set=utf8"
+    mysqldump_options: "--hex-blob"
+
+production:
+  vhost: "<%= ENV['PRODUCTION_URL'] %>"
+  wordpress_path: "<%= ENV['PRODUCTION_DIR_PATH'] %>"
+
+  database:
+    name: "<%= ENV['PRODUCTION_DB_NAME'] %>"
+    user: "<%= ENV['PRODUCTION_DB_USER'] %>"
+    password: "<%= ENV['PRODUCTION_DB_PASSWORD'] %>"
+    host: "<%= ENV['PRODUCTION_DB_HOST'] %>"
+    port: "<%= ENV['PRODUCTION_DB_PORT'] %>"
+    mysqldump_options: "--default-character-set=utf8"
+    mysqldump_options: "--hex-blob"
+
+  exclude:
+    - '.git/'
+    - '.gitignore'
+    - '.gitmodules'
+    - '.env'
+    - 'node_modules/'
+    - 'bin/'
+    - 'tmp/*'
+    - 'Gemfile*'
+    - 'Movefile'
+    - 'movefile'
+    - 'movefile.yml'
+    - 'movefile.yaml'
+    - 'wp-config.php'
+    - 'wp-content/*.sql.gz'
+    - '*.orig'
+    - 'wp-content/uploads/backwpup*/*'
+    - '.htaccess'
+
+  ssh:
+    host: "<%= ENV['PRODUCTION_SSH_HOST'] %>"
+    user: "<%= ENV['PRODUCTION_SSH_USER'] %>"
+    port: "<%= ENV['PRODUCTION_SSH_PORT'] %>"
+    rsync_options: "--verbose"

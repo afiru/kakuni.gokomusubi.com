@@ -1,0 +1,70 @@
+services:
+  database:
+    platform: linux/x86_64
+    image: mysql:5.7
+    command:
+      - "--character-set-server=utf8"
+      - "--collation-server=utf8_unicode_ci"
+    ports:
+      - "${LOCAL_DB_PORT}:3306"
+    restart: on-failure:5
+    volumes:
+      - ./sql:/sql/
+    container_name: "${PROJECT_NAME}_db"
+    environment:
+      MYSQL_USER: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: wordpress
+  wordpress:
+    build:
+      dockerfile: Dockerfile
+    depends_on:
+      - database
+    container_name: "${PROJECT_NAME}_wordpress"
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: on-failure:5
+    volumes:
+      - ./public:/var/www/html
+      - ./certs:/etc/ssl/private
+      - ./php.ini:/usr/local/etc/php/php.ini
+    working_dir: "/var/www/html${WP_WORKING_DIR}"
+    environment:
+      LOCAL_DOMAIN: "${LOCAL_DOMAIN}"
+      WORDPRESS_DB_HOST: database:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+  wordmove:
+    tty: true
+    depends_on:
+      - wordpress
+    image: welaika/wordmove
+    restart: on-failure:5
+    container_name: "${PROJECT_NAME}_wordmove"
+    volumes:
+      - ./config:/home/
+      - ./public:/var/www/html
+      - ~/.ssh:/home/.ssh
+    environment:
+      LOCAL_URL: "https://${LOCAL_DOMAIN}${WP_WORKING_DIR}"
+      WP_WORKING_DIR: "${WP_WORKING_DIR}"
+      PRODUCTION_URL: "${PRODUCTION_URL}"
+      PRODUCTION_DIR_PATH: "${PRODUCTION_DIR_PATH}"
+      PRODUCTION_DB_NAME: "${PRODUCTION_DB_NAME}"
+      PRODUCTION_DB_USER: "${PRODUCTION_DB_USER}"
+      PRODUCTION_DB_PASSWORD: "${PRODUCTION_DB_PASSWORD}"
+      PRODUCTION_DB_HOST: "${PRODUCTION_DB_HOST}"
+      PRODUCTION_DB_PORT: "${PRODUCTION_DB_PORT}"
+      PRODUCTION_SSH_HOST: "${PRODUCTION_SSH_HOST}"
+      PRODUCTION_SSH_USER: "${PRODUCTION_SSH_USER}"
+      PRODUCTION_SSH_PORT: "${PRODUCTION_SSH_PORT}"
+      RUBYOPT: -EUTF-8
+  mailhog:
+    container_name: "${PROJECT_NAME}_mailhog"
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+      - "1025:1025"
