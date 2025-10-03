@@ -58,13 +58,13 @@ LAYOUT
 }
 
 .h3LiFloor {
-    @include mi.marginPercent(166, 10, auto, 0, auto);
-    @include mi.fontSizePc(16);
+    @include mi.marginPercent(166, 8, auto, 0, auto);
+    @include mi.fontSizePc(14);
     @include mi.letterSpacing(0);
 }
 
 .txtLiFloor {
-    @include mi.marginPercent(166, 10, auto, 0, auto);
+    @include mi.marginPercent(166, 4, auto, 0, auto);
     @include mi.fontSizePc(10);
     line-height: 1.7;
     @include mi.letterSpacing(0);

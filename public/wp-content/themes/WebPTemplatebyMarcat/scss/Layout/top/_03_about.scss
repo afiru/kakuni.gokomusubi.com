@@ -50,14 +50,14 @@ LAYOUT
     @include mi.ontenerWidth(335, 118);
     @include mi.fontSizePc(10);
     @include mi.lineheight(10, 12);
-    @include mi.letterSpacing(0);
+    @include mi.letterSpacing(400);
     writing-mode: vertical-rl;
     text-orientation: upright;
     line-height: 2;
 }
 
 .aboutStaff {
-    @include mi.marginPercent(335, 14, auto, 0, auto);
+    @include mi.marginPercent(335, 20, auto, 0, auto);
 }
 
 .photoAboutStaff {

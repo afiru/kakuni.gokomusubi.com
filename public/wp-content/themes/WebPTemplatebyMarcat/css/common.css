@@ -1565,8 +1565,8 @@ LAYOUT
   width: 118px;
   font-size: 10px;
   line-height: 1.2;
-  letter-spacing: 0em;
-  text-indent: 0em;
+  letter-spacing: 0.4em;
+  text-indent: -0.4em;
   writing-mode: vertical-rl;
   text-orientation: upright;
   line-height: 2;
@@ -1602,14 +1602,14 @@ LAYOUT
 }
 
 .aboutStaff {
-  margin-top: 14px;
+  margin-top: 20px;
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (max-width: 1199px) {
   .aboutStaff {
-    margin-top: 4.17%;
+    margin-top: 5.97%;
     margin-bottom: 0%;
     margin-left: auto;
     margin-right: auto;
@@ -1943,17 +1943,17 @@ LAYOUT
 }
 
 .h3LiFloor {
-  margin-top: 10px;
+  margin-top: 8px;
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0em;
   text-indent: 0em;
 }
 @media screen and (max-width: 1199px) {
   .h3LiFloor {
-    margin-top: 6.02%;
+    margin-top: 4.81%;
     margin-bottom: 0%;
     margin-left: auto;
     margin-right: auto;
@@ -1961,12 +1961,12 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .h3LiFloor {
-    font-size: 4.2666666667vw;
+    font-size: 3.7333333333vw;
   }
 }
 
 .txtLiFloor {
-  margin-top: 10px;
+  margin-top: 4px;
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
@@ -1977,7 +1977,7 @@ LAYOUT
 }
 @media screen and (max-width: 1199px) {
   .txtLiFloor {
-    margin-top: 6.02%;
+    margin-top: 2.4%;
     margin-bottom: 0%;
     margin-left: auto;
     margin-right: auto;
@@ -2684,9 +2684,10 @@ LAYOUT
 
 .iconBtnAccess {
   width: 100%;
-  padding: 1% 0 1% 10%;
-  background: url(../img/iconBtnAccess.svg) no-repeat left center;
+  padding: 1% 0;
+  background: url(../img/iconBtnAccess.svg) no-repeat 28% center;
   background-size: auto 100%;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -2715,13 +2716,17 @@ LAYOUT
 .btnFooter a {
   display: block;
   width: 38px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.8;
+  /* 初期値 */
+  transform: rotate(0deg) scale(1);
 }
 @media screen and (max-width: 1199px) {
   .btnFooter a {
     width: 100%;
   }
 }
-.btnFooter a:hover, .btnFooter a:active {
+.btnFooter a:active, .btnFooter a:hover {
   opacity: 1;
   transform: rotate(360deg) scale(1.2);
 }
