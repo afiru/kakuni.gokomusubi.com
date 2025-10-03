@@ -15,7 +15,7 @@ LAYOUT
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999999;
+    z-index: 9999;
 }
 
 .headerBase {}
@@ -105,7 +105,7 @@ LAYOUT
 }
 
 .navHeaderBase {
-    padding: 2.66% 0% 28% 0%;
+    padding: 2.66% 0% 30% 0%;
     background: #C39A86;
     display: none;
     position: absolute;
@@ -117,6 +117,7 @@ LAYOUT
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    min-height: 100svh;
 
     &::-webkit-scrollbar {
         display: none;

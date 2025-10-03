@@ -24,7 +24,7 @@
 
         <div class="d_flex j_between aboutStaff">
             <figure class="photoAboutStaff">
-                <img loading="lazy" src="<?php echo get_bloginfo('template_url'); ?>/img/photoAboutStaff.png" alt="角煮ちゃん" width="140" height="105">
+                <img loading="lazy" src="<?php echo get_bloginfo('template_url'); ?>/img/photoAboutStaff.jpg" alt="角煮ちゃん" width="140" height="105">
             </figure>
             <section class="secAboutStaff">
                 <h2 class="cl_fff fw_700 kaisei h2SecAboutStaff">角煮</h2>
