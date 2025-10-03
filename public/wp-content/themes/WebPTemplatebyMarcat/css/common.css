@@ -1265,6 +1265,30 @@ LAYOUT
   background: #fff;
 }
 
+.fvMovie {
+  width: 100%;
+  aspect-ratio: 375/469.05;
+  position: relative;
+  overflow: hidden;
+}
+.fvMovie .fvMovieLxn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  aspect-ratio: 375/669;
+}
+.fvMovie iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 /* ==========================================================================
 use＆nameSpace
 ========================================================================== */

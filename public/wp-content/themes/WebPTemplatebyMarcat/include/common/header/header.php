@@ -36,6 +36,13 @@
     </script>
     <?php endif; ?>
 
+    <?php if (is_page() and !empty(scf::get('jsonld'))): ?>
+
+    <script type="application/ld+json">
+    <?php echo scf::get('jsonld'); ?>
+    </script>
+    <?php endif; ?>
+
     <?php if (is_category() and !empty(SCF::get_term_meta($cat, 'category', 'jsonld'))): ?>
     <script type="application/ld+json">
     <?php echo scf::get('jsonld'); ?>
