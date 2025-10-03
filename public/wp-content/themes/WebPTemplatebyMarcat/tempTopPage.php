@@ -6,7 +6,7 @@
  */
 ?>
 <?php get_template_part('include/common/header/header'); ?>
-<main class="mainIndex">
+<main class="bg_fff mainIndex">
     <?php if (have_posts()) while (have_posts()) : the_post();  ?>
     <?php get_template_part('include/layouts/top/01_fv'); ?>
     <?php get_template_part('include/layouts/top/02_news'); ?>
