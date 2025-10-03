@@ -1,0 +1,39 @@
+/* ==========================================================================
+use＆nameSpace
+========================================================================== */
+@use "../../Functions/mixin"as mi;
+
+/* ==========================================================================
+LAYOUT
+========================================================================== */
+.catFv {
+    aspect-ratio: 375 /108;
+    width: 100%;
+    background: url(../img/catFv.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.secCatFv {
+    width: 100%;
+}
+
+.h2SecCatFv {
+    @include mi.fontSizePc(24);
+    @include mi.lineheight(24, 24);
+    @include mi.letterSpacing(40);
+    text-align: center;
+}
+
+.brdSecCatFv {
+    @include mi.ontenerWidth(375, 30);
+    @include mi.marginPercent(375, 12, auto, 6, auto);
+    height: 1px;
+    background: #A4A4A4;
+}
+
+.h3SecCatFv {
+    @include mi.fontSizePc(14);
+    @include mi.lineheight(14, 14);
+    @include mi.letterSpacing(40);
+    text-align: center;
+}

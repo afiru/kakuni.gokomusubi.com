@@ -1,6 +1,13 @@
 <?php get_template_part('include/common/header/header'); ?>
-<aside class="breadcrumb_list"><?php if(function_exists('bcn_display')) { bcn_display(); }?></aside>
-<main class="mainCategory">
-<?php get_template_part('include/category/catName/00_CatName'); ?>
+<main class="bg_fff mainIndex">
+    <?php get_template_part('include/layouts/cat/01_fv'); ?>
+    <?php get_template_part('include/layouts/cat/02_catloop'); ?>
+
+    <?php get_template_part('include/layouts/top/05_calendar'); ?>
+    <?php get_template_part('include/layouts/top/07_instagram'); ?>
+    <?php get_template_part('include/layouts/top/08_access'); ?>
+
 </main>
+<?php get_template_part('include/layouts/top/09_copy'); ?>
+<?php get_template_part('include/layouts/top/10_sns'); ?>
 <?php get_template_part('include/common/footer/footer'); ?>

@@ -6,6 +6,28 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.testIndex {
-    @include mi.ontenerWidth(1200, 500);
+.instagram {
+    @include mi.marginPercent(375, 40, auto, 0, auto);
+}
+
+.h2Instagram {
+    @include mi.fontSizePc(20);
+    @include mi.lineheight(20, 25);
+    @include mi.letterSpacing(40);
+}
+
+.instagramLxn {
+    @include mi.ontenerWidth(375, 355);
+    @include mi.marginPercent(375, 20, auto, 0, auto);
+}
+
+#sbi_images {
+    gap: 0 !important;
+}
+
+.instagramLxn #sb_instagram #sbi_load .sbi_load_btn {
+    @include mi.ontenerWidth(375, 161);
+    background: #241A08;
+    @include mi.fontSizePc(16);
+    @include mi.letterSpacing(0);
 }

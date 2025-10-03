@@ -1,0 +1,128 @@
+/* ==========================================================================
+use＆nameSpace
+========================================================================== */
+@use "../../Functions/mixin"as mi;
+
+/* ==========================================================================
+LAYOUT
+========================================================================== */
+.newsTab {
+    @include mi.ontenerWidth(375, 335);
+    @include mi.marginPercent(375, 20, auto, 0, auto);
+}
+
+.liNewsTab01 {
+    @include mi.ontenerWidth(335, 115);
+}
+
+.liNewsTab02 {
+    @include mi.ontenerWidth(335, 95);
+}
+
+.btnliNewsTab {
+    font-weight: 600;
+    border: 1px solid #D9D9D9;
+    @include mi.fontSizePc(14);
+    @include mi.lineheight(14, 14);
+    @include mi.letterSpacing(40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #241A08;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 0;
+    @include mi.kadomaru(4px);
+}
+
+.btnliNewsTab.active {
+    background: #fff;
+    color: #241A08;
+}
+
+///
+.catLoop {
+    @include mi.ontenerWidth(375, 335);
+    @include mi.marginPercent(375, 10, auto, 0, auto);
+}
+
+.liCatNewsLoop {
+    border-bottom: 1px solid #B1B1B1;
+}
+
+.btnCatNewsLoop {
+    display: block;
+    @include mi.paddingPercent(335, 10, 0, 10, 0);
+    text-decoration: none;
+    color: #241A08;
+}
+
+.dateCatNewsLoop {}
+
+.timeCatNewsLoop {
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 10);
+    @include mi.letterSpacing(0);
+}
+
+.catCatNewsLoop {
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 10);
+    @include mi.letterSpacing(0);
+    @include mi.marginPercent(335, 0, 0, 0, 8);
+}
+
+.dateCatNewsLoop .newTopAppivalTop {
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 10);
+    @include mi.letterSpacing(0);
+    @include mi.marginPercent(335, 0, 0, 0, 8);
+}
+
+.h3CatNewsLoop {
+    @include mi.fontSizePc(14);
+    @include mi.lineheight(auto, auto);
+    @include mi.letterSpacing(0);
+    @include mi.marginPercent(335, 8, 0, 0, 0);
+}
+
+.pagerNewsLoop {
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(auto, auto);
+    @include mi.letterSpacing(0);
+    @include mi.marginPercent(335, 24, 0, 0, 0);
+
+    .wp-pagenavi {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        a,
+        span {
+            @include mi.ontenerWidth(335, 24);
+            @include mi.fontSizePc(12);
+            @include mi.lineheight(auto, auto);
+            @include mi.letterSpacing(0);
+            @include mi.marginPercent(335, 0, 5, 0, 5);
+            aspect-ratio: 24/20;
+            @include mi.kadomaru(4px);
+            border: 1px solid #A4A4A4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "kaisei Decol", serif;
+            font-weight: 700;
+            text-decoration: none;
+            color: #241A08;
+        }
+
+        span {
+            border: 1px solid #A4A4A4;
+            background: #A4A4A4;
+            color: #FFF;
+        }
+    }
+
+
+}

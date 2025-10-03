@@ -6,6 +6,66 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.testIndex {
-    @include mi.ontenerWidth(1200, 500);
+.floor {
+    @include mi.paddingPercent(375, 0, 0, 30, 0);
+    background: url(../img/floor.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.floorLxn {
+    @include mi.ontenerWidth(375, 355);
+    margin: auto;
+}
+
+.h2Floor {
+    @include mi.ontenerWidth(375, 38);
+}
+
+.h3Floor {
+    @include mi.marginPercent(355, 17, auto, 0, auto);
+    @include mi.fontSizePc(20);
+    @include mi.lineheight(20, 25);
+    @include mi.letterSpacing(300);
+    text-align: center;
+}
+
+.h3Floor02 {
+    @include mi.marginPercent(355, 40, auto, 0, auto);
+}
+
+.ulFloor {
+    @include mi.marginPercent(355, 29, auto, 0, auto);
+    @include mi.ontenerWidth(355, 345);
+}
+
+.liFloor {
+    @include mi.ontenerWidth(345, 166);
+
+    &:nth-child(n+3) {
+        @include mi.marginPercent(345, 24, 0, 0, 0);
+    }
+}
+
+.photoFloor {
+    aspect-ratio: 166/124;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.h3LiFloor {
+    @include mi.marginPercent(166, 10, auto, 0, auto);
+    @include mi.fontSizePc(16);
+    @include mi.letterSpacing(0);
+}
+
+.txtLiFloor {
+    @include mi.marginPercent(166, 10, auto, 0, auto);
+    @include mi.fontSizePc(10);
+    line-height: 1.7;
+    @include mi.letterSpacing(0);
 }

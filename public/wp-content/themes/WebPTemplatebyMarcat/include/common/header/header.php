@@ -57,15 +57,15 @@
     <link rel="stylesheet" href="unpkg.com/lenis@1.2.3/dist/lenis.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=kaisei+Decol:wght@400;500;700&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" id='def_set_css' type="text/css" href="<?php echo get_bloginfo('template_url'); ?>/css/common.css?ver=<?php echo date('Y-m-d'); ?>" media="all">
 </head>
 
-<body id="body" <?php body_class('baseBody'); ?>>
+<body id="body">
     <div id="scrolltop" class="bgbase wap">
         <div class="wapper pageWap">
             <div class="cntPageLxn">
-                <header id="scrolltop" class="base_header">
+                <header id="scrolltop" class="base_header" data-lenis-prevent>
                     <?php get_template_part('include/common/header/00_header'); ?>
                 </header>

@@ -6,6 +6,107 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.testIndex {
-    @include mi.ontenerWidth(1200, 500);
+.about {
+    @include mi.marginPercent(375, 40, auto, 0, auto);
+    @include mi.paddingPercent(375, 0, 0, 30, 0);
+    background: url(../img/about.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.aboutLxn {
+    @include mi.ontenerWidth(375, 355);
+    margin: auto;
+}
+
+.aboutTitleFx {}
+
+.h2AboutTitleFx {
+    @include mi.ontenerWidth(375, 38);
+}
+
+.h3AboutTitleFx {
+    @include mi.fontSizePc(15);
+    @include mi.lineheight(15, 24);
+    @include mi.letterSpacing(0);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    justify-content: space-between;
+    @include mi.ontenerWidth(355, 87);
+    @include mi.marginPercent(355, 36, 36, 0, 36);
+}
+
+.h3AboutTitleFx01 {}
+
+.h3AboutTitleFx02 {
+    @include mi.marginPercent(87, 16, 0, 0, 0);
+}
+
+.h3AboutTitleFx03 {
+    @include mi.marginPercent(87, 32, 0, 0, 0);
+}
+
+.txtAboutTitleFx {
+    @include mi.marginPercent(335, 84, 0, 0, 0);
+    @include mi.ontenerWidth(335, 118);
+    @include mi.fontSizePc(10);
+    @include mi.lineheight(10, 12);
+    @include mi.letterSpacing(0);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    line-height: 2;
+}
+
+.aboutStaff {
+    @include mi.marginPercent(335, 14, auto, 0, auto);
+}
+
+.photoAboutStaff {
+    @include mi.ontenerWidth(335, 140);
+}
+
+.secAboutStaff {
+    width: 54.7%;
+}
+
+.h2SecAboutStaff {
+    @include mi.fontSizePc(16);
+    @include mi.letterSpacing(0);
+}
+
+.txtSecAboutStaff {
+    @include mi.marginPercent(204, 9, 0, 0, 0);
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 15);
+    @include mi.letterSpacing(0);
+}
+
+.ulSecAboutStaff {
+    @include mi.marginPercent(204, 12, 0, 0, 0);
+}
+
+.liSecAboutStaff {
+    &:nth-child(n+2) {
+        @include mi.marginPercent(204, 8, 0, 0, 0);
+    }
+}
+
+.h3LiSecAboutStaff {
+    @include mi.ontenerWidth(204, 53);
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 15);
+    @include mi.letterSpacing(0);
+}
+
+.dottoLiSecAboutStaff {
+    @include mi.ontenerWidth(204, 16);
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 15);
+    @include mi.letterSpacing(0);
+}
+
+.txtLiSecAboutStaff {
+    @include mi.ontenerWidth(204, 126);
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 15);
+    @include mi.letterSpacing(0);
 }

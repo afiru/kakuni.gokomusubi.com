@@ -1,15 +1,256 @@
 /* ==========================================================================
 use＆nameSpace
 ========================================================================== */
-@use "../../Functions/mixin" as mi;
+@use "../../Functions/mixin"as mi;
 
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.test {
-    @include mi.letterSpacing(60);
+.wap {
+    overflow: clip;
+}
+
+.base_header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+}
+
+.headerBase {}
+
+.headerBaseLx {
+    @include mi.paddingPercent(375, 10, 0, 11, 0);
+}
+
+.headerBaseLx.on {}
+
+.h1HeaderBasae {
     @include mi.fontSizePc(12);
-    @include mi.mq(sp) {
-        @include mi.fontSizeSp(14);
+    @include mi.letterSpacing(0);
+
+}
+
+.headerBaseFx {
+    @include mi.ontenerWidth(375, 335);
+    @include mi.marginPercent(375, 10, auto, 0, auto);
+}
+
+.logoHeaderBase {
+    @include mi.ontenerWidth(335, 250);
+    cursor: pointer;
+}
+
+.menuHeaderPc {
+    @include mi.ontenerWidth(335, 40);
+}
+
+.menuHeaderPcIn {
+    width: 100%;
+    position: relative;
+    aspect-ratio: 40/21;
+
+}
+
+.brdmenuHeaderPc {
+    aspect-ratio: 40/3;
+    background: #241A08;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.brdmenuHeaderPc01 {
+    top: 0;
+    transition-duration: 0.5s;
+}
+
+.brdmenuHeaderPc02 {
+    top: 50%;
+    transition-duration: 0.5s;
+}
+
+.brdmenuHeaderPc03 {
+    top: 100%;
+    transition-duration: 0.5s;
+}
+
+.menuHeaderPc.on {
+    .brdmenuHeaderPc01 {
+        top: 50%;
+        transform: rotate(20deg);
     }
+
+    .brdmenuHeaderPc02 {
+        top: 50%;
+        opacity: 0;
+    }
+
+    .brdmenuHeaderPc03 {
+        top: 50%;
+        transform: rotate(-20deg);
+    }
+}
+
+.txtMenuHeader {
+    @include mi.fontSizePc(12);
+    @include mi.letterSpacing(0);
+    text-align: center;
+    width: fit-content;
+    display: block;
+    margin: 18% auto 0 auto;
+    color: #241A08;
+}
+
+.navHeaderBase {
+    padding: 2.66% 0% 28% 0%;
+    background: #C39A86;
+    display: none;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 100vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.ulNavHeaderBase {
+    @include mi.ontenerWidth(375, 336);
+    margin: auto;
+}
+
+.liNavHeaderBase {
+    border-bottom: 1px solid #FFF;
+
+}
+
+.btnNavHeaderBase {
+    aspect-ratio: 336/60;
+    text-decoration: none;
+}
+
+.secNavHeaderBase {
+    @include mi.ontenerWidth(336, 301);
+    margin: 0 0 0 auto;
+}
+
+.h2NavHeaderBase {
+    @include mi.fontSizePc(16);
+    line-height: 1;
+    @include mi.letterSpacing(0);
+}
+
+.rubyNavHeaderBase {
+    @include mi.marginPercent(301, 6, auto, 0, auto);
+    @include mi.fontSizePc(13);
+    line-height: 1;
+    @include mi.letterSpacing(0);
+}
+
+.iconNavHeaderBase {
+    @include mi.ontenerWidth(336, 26);
+}
+
+.secBtmNavHeader {
+    @include mi.marginPercent(375, 23, auto, 0, auto);
+    @include mi.ontenerWidth(375, 336);
+}
+
+.secBtmNavHeader02 {
+    @include mi.marginPercent(375, 80, auto, 0, auto);
+}
+
+.h2BtmNavHeader {
+    @include mi.fontSizePc(20);
+    @include mi.lineheight(20, 20);
+    @include mi.letterSpacing(0);
+}
+
+.addressBtmNavHeader {
+    @include mi.marginPercent(336, 10, auto, 0, auto);
+}
+
+.liAddressBtmNavHeader {
+    &:nth-child(n+2) {
+        @include mi.marginPercent(336, 10, 0, 0, 0);
+    }
+}
+
+.h3LiAddressBtmNavHeader {
+    @include mi.ontenerWidth(336, 53);
+    @include mi.fontSizePc(13);
+    @include mi.lineheight(13, 24);
+    @include mi.letterSpacing(0);
+}
+
+.dottoLiAddressBtmNavHeader {
+    @include mi.ontenerWidth(336, 16);
+    @include mi.lineheight(13, 24);
+    @include mi.fontSizePc(13);
+    @include mi.letterSpacing(0);
+}
+
+.txtLiAddressBtmNavHeader {
+    @include mi.ontenerWidth(336, 267);
+    @include mi.fontSizePc(13);
+    @include mi.lineheight(13, 24);
+    @include mi.letterSpacing(0);
+}
+
+.mapAddressBtmNavHeader {
+    @include mi.marginPercent(336, 10, auto, 0, auto);
+    @include mi.kadomaru(6px);
+    aspect-ratio: 336/171;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.mapAddressBtmNavHeader iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.btnAddressBtmNavHeadeLxn {
+    @include mi.marginPercent(336, 15, auto, 0, auto);
+    @include mi.ontenerWidth(336, 336);
+}
+
+.btnAddressBtmNavHeade {
+    aspect-ratio: 336/40;
+    @include mi.fontSizePc(16);
+    @include mi.letterSpacing(0);
+    @include mi.kadomaru(5px);
+    text-decoration: none;
+}
+
+.snSNavHeader {
+    @include mi.marginPercent(336, 16, auto, 0, auto);
+    @include mi.ontenerWidth(336, 94);
+    display: flex;
+    justify-content: space-between;
+}
+
+.liSnSNavHeader {
+    @include mi.ontenerWidth(94, 42);
+}
+
+.h2BtmNavHeader {
+    @include mi.fontSizePc(16);
+    @include mi.letterSpacing(0);
 }

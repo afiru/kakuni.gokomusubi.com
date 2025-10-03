@@ -6,6 +6,17 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.testIndex {
-    @include mi.ontenerWidth(1200, 500);
+.calendar {
+    @include mi.marginPercent(375, 80, auto, 0, auto);
+}
+
+.h2Calendar {
+    @include mi.fontSizePc(20);
+    @include mi.lineheight(20, 25);
+    @include mi.letterSpacing(40);
+}
+
+.picCalendar {
+    @include mi.marginPercent(375, 18, auto, 0, auto);
+    @include mi.ontenerWidth(375, 355);
 }

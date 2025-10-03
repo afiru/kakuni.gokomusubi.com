@@ -1,8 +1,5 @@
-<?php $video_url = SCF::get('fvMovie'); ?>
-<?php if ($video_url): ?>
+<?php if (SCF::get('fvMovie')): ?>
 <div class="fvMovie">
-    <video controls width="375" height="469">
-        <source src="<?php echo esc_url($video_url); ?>" type="video/mp4">
-    </video>
+    <?php echo SCF::get('fvMovie'); ?>
 </div>
 <?php endif; ?>

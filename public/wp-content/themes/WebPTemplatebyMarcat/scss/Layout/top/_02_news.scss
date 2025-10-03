@@ -6,6 +6,70 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.testIndex {
-    @include mi.ontenerWidth(1200, 500);
+.topNews {
+
+    @include mi.ontenerWidth(375, 354);
+    margin: auto;
+}
+
+.topNewsFx {}
+
+.h2TopNews {
+    @include mi.ontenerWidth(354, 37);
+}
+
+.topNewsLoop {
+    @include mi.marginPercent(354, 30, 0, 0, auto);
+    @include mi.ontenerWidth(354, 296);
+}
+
+.ulTopNewsLoop {}
+
+.liTopNewsLoop {
+    @include mi.paddingPercent(354, 10, 0, 10, 0);
+    border-bottom: 1px solid #B1B1B1;
+}
+
+.btnTopNewsLoop {
+    aspect-ratio: 296/49;
+    text-decoration: none;
+    color: #241A08;
+}
+
+.dateTopNewsLoop {}
+
+.timeTopNewsLoop {
+    @include mi.fontSizePc(10);
+    @include mi.letterSpacing(0);
+}
+
+.newTopAppivalTop {
+    @include mi.fontSizePc(10);
+    @include mi.letterSpacing(0);
+}
+
+.catTopNewsLoop {
+    @include mi.marginPercent(297, 0, 10, 0, 10);
+    @include mi.fontSizePc(10);
+    @include mi.letterSpacing(0);
+}
+
+.h3TopNewsLoop {
+    @include mi.marginPercent(297, 7, 0, 0, 0);
+    @include mi.fontSizePc(12);
+    @include mi.letterSpacing(0);
+}
+
+.readmoneTopNewsLoop {
+    @include mi.marginPercent(297, 24, 0, 0, auto);
+    @include mi.ontenerWidth(297, 161);
+}
+
+.btnReadmoneTopNewsLoop {
+    @include mi.kadomaru(5px);
+    aspect-ratio: 161/40;
+    @include mi.fontSizePc(14);
+    @include mi.letterSpacing(0);
+    background: #241A08;
+    text-decoration: none;
 }

@@ -6,6 +6,72 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.testIndex {
-    @include mi.ontenerWidth(1200, 500);
+.price {
+    @include mi.marginPercent(375, 80, auto, 0, auto);
+    @include mi.paddingPercent(375, 0, 0, 30, 0);
+    background: url(../img/price.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.priceLxn {
+    @include mi.ontenerWidth(375, 355);
+    margin: auto;
+}
+
+.txtPriceTitle {
+    margin: 44.14% 0% 0% -5%;
+    @include mi.ontenerWidth(335, 34);
+    @include mi.fontSizePc(10);
+    @include mi.lineheight(10, 12);
+    @include mi.letterSpacing(0);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    line-height: 2;
+}
+
+.mainPriceLxn {
+    @include mi.marginPercent(335, 40, 0, 0, 0);
+    @include mi.ontenerWidth(335, 254);
+}
+
+.systemPrice {}
+
+.h3MainPrice {
+    @include mi.fontSizePc(16);
+    @include mi.letterSpacing(0);
+}
+
+.ulPriceCnt {
+    @include mi.marginPercent(254, 11, 0, 0, 0);
+}
+
+.liPriceCnt {
+    &:nth-child(n+2) {
+        @include mi.marginPercent(254, 10, 0, 0, 0);
+    }
+}
+
+.h4PriceCnt {
+    @include mi.ontenerWidth(254, 108);
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 15);
+    @include mi.letterSpacing(50);
+}
+
+.dottoPriceCnt {
+    @include mi.ontenerWidth(254, 16);
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 15);
+    @include mi.letterSpacing(50);
+}
+
+.txtPriceCnt {
+    @include mi.ontenerWidth(254, 135);
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 15);
+    @include mi.letterSpacing(50);
+}
+
+.systemPrice02 {
+    @include mi.marginPercent(254, 50, 0, 0, 0);
 }

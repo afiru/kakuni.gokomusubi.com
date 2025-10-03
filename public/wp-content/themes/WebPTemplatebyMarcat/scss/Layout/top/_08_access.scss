@@ -6,6 +6,114 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.testIndex {
-    @include mi.ontenerWidth(1200, 500);
+.access {
+    @include mi.marginPercent(375, 40, auto, 0, auto);
+    @include mi.paddingPercent(375, 0, 0, 30, 0);
+    background: url(../img/price.jpg) no-repeat center top;
+    background-size: cover;
+    background: url(../img/access.jpg) no-repeat;
+}
+
+.accessLxn {
+    @include mi.ontenerWidth(375, 355);
+    margin: auto;
+}
+
+.h2Access {
+    @include mi.ontenerWidth(355, 38);
+    margin: 0 0 0 auto;
+}
+
+.mainAccess {
+    @include mi.ontenerWidth(355, 289);
+    margin: -5% auto 0 0;
+}
+
+.topMainAccess {}
+
+.titleTopAccessFx {}
+
+.h2TitleTopAccess {
+    @include mi.fontSizePc(20);
+    @include mi.letterSpacing(0);
+}
+
+.ulTitleTopAccess {
+    @include mi.ontenerWidth(289, 56);
+}
+
+.liTitleTopAccess {
+    @include mi.ontenerWidth(56, 25);
+}
+
+.btnTitleTopAccess {}
+
+.tableAccess {
+    @include mi.marginPercent(289, 22, auto, 0, 0);
+}
+
+.liTableAccess {
+    &:nth-child(n+2) {
+        @include mi.marginPercent(289, 10, 0, 0, 0);
+    }
+}
+
+.h3TableAccess {
+    @include mi.ontenerWidth(289, 53);
+    @include mi.fontSizePc(13);
+    @include mi.lineheight(13, 24);
+    @include mi.letterSpacing(0);
+}
+
+.dottoTableAccess {
+    @include mi.ontenerWidth(289, 16);
+    @include mi.fontSizePc(13);
+    @include mi.lineheight(13, 24);
+    @include mi.letterSpacing(0);
+}
+
+.txtTableAccess {
+    @include mi.ontenerWidth(289, 200);
+    @include mi.fontSizePc(13);
+    @include mi.lineheight(13, 24);
+    @include mi.letterSpacing(0);
+}
+
+.accessMap {
+    @include mi.marginPercent(355, 16, auto, 0, auto);
+    position: relative;
+    aspect-ratio: 355/181;
+    overflow: hidden;
+}
+
+.accessMap iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.btnAccessLxn {
+    @include mi.marginPercent(355, 16, auto, 0, auto);
+    @include mi.ontenerWidth(355, 355);
+}
+
+.btnAccess {
+    aspect-ratio: 355/50;
+    @include mi.fontSizePc(16);
+    @include mi.letterSpacing(0);
+    @include mi.kadomaru(5px);
+    text-decoration: none;
+}
+
+.iconBtnAccess {
+    width: 100%;
+    padding: 1% 0 1% 10%;
+    background: url(../img/iconBtnAccess.svg) no-repeat left center;
+    background-size: auto 100%;
+
 }

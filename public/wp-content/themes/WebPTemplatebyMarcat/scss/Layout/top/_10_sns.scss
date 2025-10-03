@@ -6,6 +6,65 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.testIndex {
-    @include mi.ontenerWidth(1200, 500);
+.snsFooter {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include mi.paddingPercent(375, 10, 0, 10, 0);
+    z-index: 99999;
+}
+
+.snsFooterLxn {
+    @include mi.ontenerWidth(375, 355);
+    margin: auto;
+}
+
+.btnSnsFooterLxn {
+    @include mi.ontenerWidth(375, 164);
+}
+
+.btnSnsFooter {
+    aspect-ratio: 164 / 28;
+    @include mi.kadomaru(4px);
+    text-decoration: none;
+}
+
+.iconBtnSnsFooter {
+    background: url(../img/iconBtnSnsFooter.svg) no-repeat left center;
+    background-size: auto 80%;
+    @include mi.fontSizePc(16);
+    @include mi.lineheight(auto, auto);
+    @include mi.letterSpacing(0);
+    padding: 0 0 0 24px;
+
+    @include mi.mq(sp) {
+        @include mi.paddingVw(375, 0, 0, 0, 23);
+    }
+
+}
+
+.snsCheack {
+    @include mi.ontenerWidth(375, 186);
+}
+
+.h2SnsCheack {
+    @include mi.ontenerWidth(186, 123);
+    @include mi.fontSizePc(15);
+    @include mi.lineheight(auto, auto);
+    @include mi.letterSpacing(0);
+}
+
+.ulSnsCheack {
+    @include mi.ontenerWidth(186, 63);
+}
+
+.liSnsCheack {
+    @include mi.ontenerWidth(63, 25);
+
+    svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }

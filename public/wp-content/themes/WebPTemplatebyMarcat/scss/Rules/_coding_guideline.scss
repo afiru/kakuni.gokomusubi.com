@@ -78,6 +78,10 @@ svg {
         }
     }
 
+    .order_#{$i} {
+        order: $i;
+    }
+
     .fw_#{$i*100} {
         font-weight: $i*100;
     }

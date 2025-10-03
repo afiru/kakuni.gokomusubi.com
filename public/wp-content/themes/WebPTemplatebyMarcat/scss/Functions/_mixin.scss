@@ -545,8 +545,8 @@ fonts
 @mixin fontSizePc($pc_size: 0px) {
     font-size: $pc_size+px;
 
-    @include mq(tab) {
-        font-size: (math.div($pc_size, $tabSizePxNone) * 10000vw) * 0.01;
+    @include mq(sp) {
+        font-size: (math.div($pc_size, 375) * 10000vw) * 0.01;
     }
 }
 

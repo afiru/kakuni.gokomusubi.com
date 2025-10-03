@@ -1,0 +1,87 @@
+/* ==========================================================================
+use＆nameSpace
+========================================================================== */
+@use "../../Functions/mixin"as mi;
+
+/* ==========================================================================
+LAYOUT
+========================================================================== */
+
+.singleNews {
+    @include mi.ontenerWidth(375, 335);
+    @include mi.marginPercent(375, 20, auto, 0, auto);
+}
+
+.brdSingleCat {
+    width: 100%;
+    height: 1px;
+    @include mi.marginPercent(375, 12, auto, 12, auto);
+    background: #B1B1B1;
+}
+
+.cntSingleCat {
+
+    h1,
+    h2 {
+        @include mi.fontSizePc(14);
+        @include mi.lineheight(10, 15);
+        @include mi.letterSpacing(0);
+        @include mi.marginPercent(335, 0, auto, 8, auto);
+    }
+
+    p {
+        @include mi.fontSizePc(12);
+        @include mi.lineheight(10, 15);
+        @include mi.letterSpacing(0);
+
+    }
+
+    p+h1 {
+        @include mi.marginPercent(335, 24, auto, 8, auto);
+    }
+
+    p+h2 {
+        @include mi.marginPercent(335, 22, auto, 8, auto);
+    }
+
+    p+h3 {
+        @include mi.marginPercent(335, 20, auto, 8, auto);
+    }
+
+    p+h4 {
+        @include mi.marginPercent(335, 16, auto, 8, auto);
+    }
+
+    p+p {
+        @include mi.marginPercent(335, 12, auto, 0, auto);
+    }
+
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        @include mi.marginPercent(335, 8, auto, 8, auto);
+    }
+}
+
+//
+.infoSinglePager {
+    @include mi.ontenerWidth(375, 335);
+    @include mi.marginPercent(375, 40, auto, 0, auto);
+}
+
+.pagerTopicsMainSingle {
+    width: 100%;
+    @include mi.fontSizePc(12);
+    @include mi.lineheight(10, 15);
+    @include mi.letterSpacing(0);
+
+    a {
+        text-decoration: none;
+        color: #241A08;
+    }
+}
+
+.moreTopicsArchive {
+    @include mi.marginPercent(375, 0, 24, 0, 24);
+}
