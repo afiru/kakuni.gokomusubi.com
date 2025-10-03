@@ -4,13 +4,13 @@
 Settings
 ========================================================================== */
 //■横幅の設定
-$pcSize: 1161px;
-$tabSize: 1160px;
+$pcSize: 1200px;
+$tabSize: 1199px;
 $tabTateSize: 768px; //ここは不動だと思う
 $spSize: 767px; //ここは不動だと思う
 //ここも変更してほしい
-$pcSizePxNone: 1161;
-$tabSizePxNone: 1160;
+$pcSizePxNone: 1200;
+$tabSizePxNone: 1199;
 $tabTateSizePxNone: 769; //ここは不動だと思う
 $spSizePxNone: 768; //ここは不動だと思う
 
@@ -84,6 +84,7 @@ _widthSettings
     }
 
 }
+
 //横幅Tabvw
 @mixin ontener_width02($parentPxWidth, $pxWidth) {
     width: $pxWidth+px;
@@ -262,6 +263,7 @@ _marginSettings
         }
     }
 }
+
 //マージンTabvw
 @mixin marginPercent02($parentPxWidth, $mTop, $mRight, $mBottom, $mLeft) {
     @if $mLeft==auto and $mRight==auto {
@@ -319,6 +321,7 @@ _marginSettings
         }
     }
 }
+
 @mixin marginVw($wap, $mTop, $mRight, $mBottom, $mLeft) {
     @if $mLeft==auto and $mRight==auto {
         margin-top: (math.div($mTop, $wap) * 10000vw) * 0.01;
@@ -403,6 +406,7 @@ _paddingSettings
         }
     }
 }
+
 @mixin paddingPercent02($parentPxWidth, $mTop, $mRight, $mBottom, $mLeft) {
     @if $mLeft==auto or $mRight==auto {
         padding-top: $mTop + 0px;
@@ -430,6 +434,7 @@ _paddingSettings
         }
     }
 }
+
 @mixin paddingVw($wap, $mTop, $mRight, $mBottom, $mLeft) {
     @if $mLeft==auto and $mRight==auto {
         padding-top: (math.div($mTop, $wap) * 10000vw) * 0.01;
