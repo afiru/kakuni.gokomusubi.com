@@ -26,32 +26,55 @@
                     </ul>
                 </section>
 
-                <section class="systemPrice systemPrice02">
-                    <h3 class="cl_fff fw_700 kaisei h3MainPrice">その他アルコール</h3>
-                    <ul class="ulPriceCnt">
-                        <?php foreach (scf::get('alcoholMenu') as $fields): ?>
-                        <li class="d_flex j_between cl_fff maru liPriceCnt">
-                            <h4 class="h4PriceCnt"><?php echo $fields['thAlcoholMenu']; ?></h4>
-                            <span class="dottoPriceCnt">：</span>
-                            <p class="txtPriceCnt"><?php echo $fields['tdAlcoholMenu']; ?></p>
-                        </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </section>
 
-                <section class="systemPrice systemPrice02">
-                    <h3 class="cl_fff fw_700 kaisei h3MainPrice">その他フード</h3>
-                    <ul class="ulPriceCnt">
-                        <?php foreach (scf::get('foodMenu') as $fields): ?>
-                        <li class="d_flex j_between cl_fff maru liPriceCnt">
-                            <h4 class="h4PriceCnt"><?php echo $fields['thFoodMenu']; ?></h4>
-                            <span class="dottoPriceCnt">：</span>
-                            <p class="txtPriceCnt"><?php echo $fields['tdFoodMenu']; ?></p>
-                        </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </section>
             </div>
         </div>
+
+        <section class="systemPrice systemPrice02">
+            <h3 class="cl_fff fw_700 kaisei h3MainPrice">アルコールメニュー</h3>
+            <ul class="d_flex j_between row ulPriceCnt ulPriceCnt02">
+                <?php foreach (scf::get('alcoholMenu') as $fields): ?>
+                <li class="d_flex j_between cl_fff maru liPriceCnt liPriceCnt02">
+                    <h4 class="h4PriceCnt"><?php echo $fields['thAlcoholMenu']; ?></h4>
+                    <span class="dottoPriceCnt">：</span>
+                    <p class="txtPriceCnt"><?php echo $fields['tdAlcoholMenu']; ?></p>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+        </section>
+
+        <section class="systemPrice systemPrice03">
+            <h3 class="cl_fff fw_700 kaisei h3MainPrice">その他フード</h3>
+            <p class="cl_fff fw_500 mincho txtMainPirceTysyaku">
+                ※フードメニューは「おくじこん・つくし・赤玉」さんより出前となります。
+            </p>
+            <ul class="d_flex j_between row ulPriceCnt ulPriceCnt03">
+                <?php foreach (scf::get('foodMenu') as $fields): ?>
+                <li class="d_flex j_between cl_fff maru liPriceCnt liPriceCnt03">
+                    <h4 class="h4PriceCnt"><?php echo $fields['thFoodMenu']; ?></h4>
+                    <span class="dottoPriceCnt">：</span>
+                    <p class="txtPriceCnt"><?php echo $fields['tdFoodMenu']; ?></p>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+        </section>
+        <ul class="d_flex j_between row ulFloor">
+            <?php foreach (scf::get('imgsFoodMenu') as $fields): ?>
+            <?php $img = get_scf_img_loop_url_id($fields['imgFoodMenu']); ?>
+            <?php if (!empty($img[0])): ?>
+            <li class="pore liFloor">
+
+                <a class="btnliFloor" href="<?php echo $img[0]; ?>" data-lightbox="image-1" data-title="<?php echo $fields['capFoodMenu']; ?>">
+                    <figure class="photoFloor">
+                        <img loading="lazy" src="<?php echo $img[0]; ?>" alt="空間画像" width="<?php echo $img[1]; ?>" height="<?php echo $img[2]; ?>">
+                    </figure>
+                    <figure class="iconFloor">
+                        <img loading="lazy" src="<?php echo get_bloginfo('template_url'); ?>/img/iconFloor.svg" alt="空間" width="38" height="100.64">
+                    </figure>
+                </a>
+            </li>
+            <?php endif; ?>
+            <?php endforeach; ?>
+        </ul>
     </div>
 </div>

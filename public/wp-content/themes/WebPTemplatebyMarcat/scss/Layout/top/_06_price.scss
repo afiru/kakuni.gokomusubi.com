@@ -27,6 +27,9 @@ LAYOUT
     writing-mode: vertical-rl;
     text-orientation: upright;
     line-height: 2;
+    @include mi.mq(sp) {
+    margin: 44.14% 0% 0% 32%;
+    }
 }
 
 .mainPriceLxn {
@@ -40,38 +43,83 @@ LAYOUT
     @include mi.fontSizePc(16);
     @include mi.letterSpacing(0);
 }
-
+.txtMainPirceTysyaku {
+        @include mi.marginPercent(254, 8, 0, 0, 0);
+    @include mi.fontSizePc(10);
+    @include mi.lineheight(10, 12);
+    @include mi.letterSpacing(0);
+}
 .ulPriceCnt {
-    @include mi.marginPercent(254, 11, 0, 0, 0);
+    @include mi.marginPercent(254, 12, 0, 0, 0);
 }
 
 .liPriceCnt {
     &:nth-child(n+2) {
-        @include mi.marginPercent(254, 10, 0, 0, 0);
+        @include mi.marginPercent(254, 8, 0, 0, 0);
     }
 }
 
 .h4PriceCnt {
-    @include mi.ontenerWidth(254, 108);
-    @include mi.fontSizePc(12);
+    @include mi.ontenerWidth(254, 98);
+    @include mi.fontSizePc(11);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(50);
 }
 
 .dottoPriceCnt {
     @include mi.ontenerWidth(254, 16);
-    @include mi.fontSizePc(12);
+    @include mi.fontSizePc(11);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(50);
 }
 
 .txtPriceCnt {
     @include mi.ontenerWidth(254, 135);
-    @include mi.fontSizePc(12);
+    @include mi.fontSizePc(11);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(50);
 }
 
-.systemPrice02 {
-    @include mi.marginPercent(254, 50, 0, 0, 0);
+.systemPrice03 {
+    @include mi.marginPercent(355, 50, 0, 0, 0);
+}
+
+.ulPriceCnt02 {
+
+}
+.liPriceCnt02 {
+    width: 48%;
+            &:nth-child(n+2) {
+        @include mi.marginPercent(254, 0, 0, 0, 0);
+    }
+        &:nth-child(n+3) {
+        @include mi.marginPercent(254, 12, 0, 0, 0);
+    }
+    .h4PriceCnt {
+            @include mi.ontenerWidth(174, 280);
+    }
+    .dottoPriceCnt {
+                    @include mi.ontenerWidth(174, 10);
+    }
+    .txtPriceCnt {
+    @include mi.ontenerWidth(174, 85);
+    text-align: right;
+    }
+}
+
+.liPriceCnt03 {
+    width: 100%;
+            &:nth-child(n+2) {
+        @include mi.marginPercent(254, 12, 0, 0, 0);
+    }
+    .h4PriceCnt {
+            @include mi.ontenerWidth(254, 610);
+    }
+    .dottoPriceCnt {
+                    @include mi.ontenerWidth(254, 10);
+    }
+    .txtPriceCnt {
+    @include mi.ontenerWidth(254, 85);
+    text-align: right;
+    }
 }

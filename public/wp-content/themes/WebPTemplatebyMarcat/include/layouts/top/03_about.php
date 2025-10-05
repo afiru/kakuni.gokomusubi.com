@@ -29,19 +29,25 @@
             <section class="secAboutStaff">
                 <h2 class="cl_fff fw_700 kaisei h2SecAboutStaff">角煮</h2>
                 <p class="cl_fff fw_600 maru text_justify txtSecAboutStaff">
-                    角煮ちゃん自己紹介文が入ります！角煮ちゃん自己紹介文が入ります！
+                    昭和60年生まれの昭和女。みんなとガハハ笑って過ごしていきたいです。お気軽に来店頂ければ幸いです。
                 </p>
                 <ul class="ulSecAboutStaff">
                     <li class="d_flex j_between liSecAboutStaff">
-                        <h3 class="cl_fff fw_500 maru h3LiSecAboutStaff">キャラ</h3>
+                        <h3 class="cl_fff fw_500 maru h3LiSecAboutStaff">すきなこと</h3>
                         <span class="cl_fff fw_500 maru dottoLiSecAboutStaff">：</span>
-                        <p class="cl_fff maru fw_500 txtLiSecAboutStaff">寂しがり屋の一人好き</p>
+                        <p class="cl_fff maru fw_500 txtLiSecAboutStaff">楽しいこと、面白いこと</p>
                     </li>
 
                     <li class="d_flex j_between liSecAboutStaff">
                         <h3 class="cl_fff fw_500 maru h3LiSecAboutStaff">得意な曲</h3>
                         <span class="cl_fff fw_500 maru dottoLiSecAboutStaff">：</span>
                         <p class="cl_fff maru fw_500 txtLiSecAboutStaff">うどんスープ</p>
+                    </li>
+
+                    <li class="d_flex j_between liSecAboutStaff">
+                        <h3 class="cl_fff fw_500 maru h3LiSecAboutStaff">好きな食べ物</h3>
+                        <span class="cl_fff fw_500 maru dottoLiSecAboutStaff">：</span>
+                        <p class="cl_fff maru fw_500 txtLiSecAboutStaff">たこやき・豚汁・エビチリ</p>
                     </li>
                 </ul>
             </section>

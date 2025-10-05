@@ -38,12 +38,12 @@ LAYOUT
 }
 
 .logoHeaderBase {
-    @include mi.ontenerWidth(335, 250);
+    @include mi.ontenerWidth(335, 220);
     cursor: pointer;
 }
 
 .menuHeaderPc {
-    @include mi.ontenerWidth(335, 40);
+    @include mi.ontenerWidth(335, 32);
 }
 
 .menuHeaderPcIn {
@@ -95,7 +95,7 @@ LAYOUT
 }
 
 .txtMenuHeader {
-    @include mi.fontSizePc(12);
+    @include mi.fontSizePc(10);
     @include mi.letterSpacing(0);
     text-align: center;
     width: fit-content;

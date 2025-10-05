@@ -54,27 +54,27 @@ LAYOUT
 
 .liTableAccess {
     &:nth-child(n+2) {
-        @include mi.marginPercent(289, 10, 0, 0, 0);
+        @include mi.marginPercent(289, 20, 0, 0, 0);
     }
 }
 
 .h3TableAccess {
-    @include mi.ontenerWidth(289, 53);
-    @include mi.fontSizePc(13);
+    @include mi.ontenerWidth(289, 40);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(13, 24);
     @include mi.letterSpacing(0);
 }
 
 .dottoTableAccess {
-    @include mi.ontenerWidth(289, 16);
-    @include mi.fontSizePc(13);
+    @include mi.ontenerWidth(289, 12);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(13, 24);
     @include mi.letterSpacing(0);
 }
 
 .txtTableAccess {
-    @include mi.ontenerWidth(289, 200);
-    @include mi.fontSizePc(13);
+    @include mi.ontenerWidth(289, 222);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(13, 24);
     @include mi.letterSpacing(0);
 }

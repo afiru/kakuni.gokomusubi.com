@@ -23,7 +23,6 @@
                         <img loading="lazy" src="<?php echo get_bloginfo('template_url'); ?>/img/iconFloor.svg" alt="空間" width="38" height="100.64">
                     </figure>
                 </a>
-
             </li>
             <?php endforeach; ?>
         </ul>
