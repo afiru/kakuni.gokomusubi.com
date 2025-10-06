@@ -2824,6 +2824,12 @@ LAYOUT
   position: relative;
   aspect-ratio: 355/181;
   overflow: hidden;
+  border-radius: 8px;
+  /* CSS3草案 */
+  -webkit-border-radius: 8px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 8px;
+  /* Firefox用 */
 }
 @media screen and (max-width: 1199px) {
   .accessMap {

@@ -84,6 +84,7 @@ LAYOUT
     position: relative;
     aspect-ratio: 355/181;
     overflow: hidden;
+    @include mi.kadomaru(8px);
 }
 
 .accessMap iframe {

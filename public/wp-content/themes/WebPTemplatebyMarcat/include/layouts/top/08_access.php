@@ -71,11 +71,9 @@
                     </li>
                 </ul>
             </div>
-
-
         </div>
         <div class="accessMap">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1160.7220379150808!2d135.05338265688025!3d34.628993088648315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600083006514a2ad%3A0xec0ab4b157d317c7!2z5q2M44Gj44Gm6LiK44KM44KL44GK5bqXIOinkueFrg!5e0!3m2!1sja!2sjp!4v1759744134844!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d976.0460814927706!2d135.0540537197128!3d34.629071229782376!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600083006514a2ad%3A0xec0ab4b157d317c7!2z5q2M44Gj44Gm6LiK44KM44KL44GK5bqXIOinkueFrg!5e0!3m2!1sja!2sjp!4v1759744203885!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="btnAccessLxn">
             <a class="d_flex j_center ali_center bg_241A08 cl_fff fw_700 kaisei btnAccess" href="https://www.google.com/maps/dir/?api=1&destination=34.628725,135.0552711&z=10" target="_blank">
