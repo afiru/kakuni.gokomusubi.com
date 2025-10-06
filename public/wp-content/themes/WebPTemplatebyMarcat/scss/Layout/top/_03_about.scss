@@ -38,11 +38,11 @@ LAYOUT
 .h3AboutTitleFx01 {}
 
 .h3AboutTitleFx02 {
-   margin-top: 16px;
+    margin-top: 16px;
 }
 
 .h3AboutTitleFx03 {
-   margin-top: 32px;
+    margin-top: 32px;
 }
 
 .txtAboutTitleFx {
@@ -75,7 +75,7 @@ LAYOUT
 
 .txtSecAboutStaff {
     @include mi.marginPercent(204, 9, 0, 0, 0);
-    @include mi.fontSizePc(12);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
@@ -92,21 +92,21 @@ LAYOUT
 
 .h3LiSecAboutStaff {
     @include mi.ontenerWidth(204, 53);
-    @include mi.fontSizePc(12);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .dottoLiSecAboutStaff {
     @include mi.ontenerWidth(204, 16);
-    @include mi.fontSizePc(12);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .txtLiSecAboutStaff {
     @include mi.ontenerWidth(204, 126);
-    @include mi.fontSizePc(12);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
