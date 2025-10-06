@@ -1288,6 +1288,15 @@ LAYOUT
   width: 100% !important;
   height: 100% !important;
 }
+.fvMovie video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
 
 /* ==========================================================================
 use＆nameSpace
@@ -1407,6 +1416,7 @@ LAYOUT
   font-size: 12px;
   letter-spacing: 0em;
   text-indent: 0em;
+  line-height: 1.25;
 }
 @media screen and (max-width: 1199px) {
   .h3TopNewsLoop {
@@ -3670,6 +3680,21 @@ LAYOUT
 }
 @media screen and (max-width: 1199px) {
   .cntSingleCat img {
+    margin-top: 2.38%;
+    margin-bottom: 2.38%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.cntSingleCat iframe {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+@media screen and (max-width: 1199px) {
+  .cntSingleCat iframe {
     margin-top: 2.38%;
     margin-bottom: 2.38%;
     margin-left: auto;

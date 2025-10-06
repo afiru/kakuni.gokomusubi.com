@@ -58,6 +58,7 @@ LAYOUT
     @include mi.marginPercent(297, 7, 0, 0, 0);
     @include mi.fontSizePc(12);
     @include mi.letterSpacing(0);
+    line-height: 1.25;
 }
 
 .readmoneTopNewsLoop {
