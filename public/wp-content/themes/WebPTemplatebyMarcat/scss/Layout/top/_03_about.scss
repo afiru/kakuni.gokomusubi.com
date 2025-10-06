@@ -61,11 +61,16 @@ LAYOUT
 }
 
 .photoAboutStaff {
-    @include mi.ontenerWidth(335, 140);
+    @include mi.ontenerWidth(335, 100);
 }
 
 .secAboutStaff {
-    width: 54.7%;
+    @include mi.ontenerWidth(335, 245);
+
+    @include mi.mq(sp) {
+        @include mi.ontenerWidth(335, 225);
+    }
+
 }
 
 .h2SecAboutStaff {
