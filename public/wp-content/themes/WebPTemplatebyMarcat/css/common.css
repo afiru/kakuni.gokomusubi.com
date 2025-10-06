@@ -1734,7 +1734,7 @@ LAYOUT
 }
 
 .h3LiSecAboutStaff {
-  width: 53px;
+  width: 68px;
   font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0em;
@@ -1742,7 +1742,7 @@ LAYOUT
 }
 @media screen and (max-width: 1199px) {
   .h3LiSecAboutStaff {
-    width: 25.98%;
+    width: 33.33%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1766,7 +1766,7 @@ LAYOUT
 }
 
 .dottoLiSecAboutStaff {
-  width: 16px;
+  width: 12px;
   font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0em;
@@ -1774,7 +1774,7 @@ LAYOUT
 }
 @media screen and (max-width: 1199px) {
   .dottoLiSecAboutStaff {
-    width: 7.84%;
+    width: 5.88%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1798,7 +1798,7 @@ LAYOUT
 }
 
 .txtLiSecAboutStaff {
-  width: 126px;
+  width: 176px;
   font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0em;
@@ -1806,7 +1806,7 @@ LAYOUT
 }
 @media screen and (max-width: 1199px) {
   .txtLiSecAboutStaff {
-    width: 61.76%;
+    width: 86.27%;
   }
 }
 @media screen and (max-width: 767px) {

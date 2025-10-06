@@ -96,21 +96,21 @@ LAYOUT
 }
 
 .h3LiSecAboutStaff {
-    @include mi.ontenerWidth(204, 53);
+    @include mi.ontenerWidth(204, 68);
     @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .dottoLiSecAboutStaff {
-    @include mi.ontenerWidth(204, 16);
+    @include mi.ontenerWidth(204, 12);
     @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .txtLiSecAboutStaff {
-    @include mi.ontenerWidth(204, 126);
+    @include mi.ontenerWidth(204, 176);
     @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
