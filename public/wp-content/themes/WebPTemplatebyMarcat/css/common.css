@@ -940,14 +940,14 @@ LAYOUT
 
 .secBtmNavHeader02 {
   margin-top: 80px;
-  margin-bottom: 0px;
+  margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (max-width: 1199px) {
   .secBtmNavHeader02 {
     margin-top: 21.33%;
-    margin-bottom: 0%;
+    margin-bottom: 21.33%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -958,6 +958,7 @@ LAYOUT
   line-height: 1;
   letter-spacing: 0em;
   text-indent: 0em;
+  font-weight: 700;
 }
 @media screen and (max-width: 767px) {
   .h2BtmNavHeader {
@@ -2152,6 +2153,24 @@ LAYOUT
   }
 }
 
+.mainTitlePriceFx {
+  width: 90px;
+}
+@media screen and (max-width: 1199px) {
+  .mainTitlePriceFx {
+    width: 25.35%;
+  }
+}
+
+.h2PriceTitle {
+  width: 39px;
+}
+@media screen and (max-width: 1199px) {
+  .h2PriceTitle {
+    width: 43.33%;
+  }
+}
+
 .txtPriceTitle {
   margin: 44.14% 0% 0% -5%;
   width: 34px;
@@ -2189,7 +2208,13 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .txtPriceTitle {
-    margin: 44.14% 0% 0% 32%;
+    width: 34px;
+    margin: 44.14% 0% 0% 0%;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 1199px) {
+  .txtPriceTitle {
+    width: 37.77%;
   }
 }
 

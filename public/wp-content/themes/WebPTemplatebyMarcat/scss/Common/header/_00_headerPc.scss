@@ -167,13 +167,14 @@ LAYOUT
 }
 
 .secBtmNavHeader02 {
-    @include mi.marginPercent(375, 80, auto, 0, auto);
+    @include mi.marginPercent(375, 80, auto, 80, auto);
 }
 
 .h2BtmNavHeader {
     @include mi.fontSizePc(20);
     @include mi.lineheight(20, 20);
     @include mi.letterSpacing(0);
+    font-weight: 700;
 }
 
 .addressBtmNavHeader {

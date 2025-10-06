@@ -18,6 +18,14 @@ LAYOUT
     margin: auto;
 }
 
+.mainTitlePriceFx {
+    @include mi.ontenerWidth(355, 90);
+}
+
+.h2PriceTitle {
+    @include mi.ontenerWidth(90, 39);
+}
+
 .txtPriceTitle {
     margin: 44.14% 0% 0% -5%;
     @include mi.ontenerWidth(335, 34);
@@ -27,8 +35,10 @@ LAYOUT
     writing-mode: vertical-rl;
     text-orientation: upright;
     line-height: 2;
+
     @include mi.mq(sp) {
-    margin: 44.14% 0% 0% 32%;
+        @include mi.ontenerWidth(90, 34);
+        margin: 44.14% 0% 0% 0%;
     }
 }
 
@@ -43,12 +53,14 @@ LAYOUT
     @include mi.fontSizePc(16);
     @include mi.letterSpacing(0);
 }
+
 .txtMainPirceTysyaku {
-        @include mi.marginPercent(254, 8, 0, 0, 0);
+    @include mi.marginPercent(254, 8, 0, 0, 0);
     @include mi.fontSizePc(10);
     @include mi.lineheight(10, 12);
     @include mi.letterSpacing(0);
 }
+
 .ulPriceCnt {
     @include mi.marginPercent(254, 12, 0, 0, 0);
 }
@@ -84,42 +96,50 @@ LAYOUT
     @include mi.marginPercent(355, 50, 0, 0, 0);
 }
 
-.ulPriceCnt02 {
+.ulPriceCnt02 {}
 
-}
 .liPriceCnt02 {
     width: 48%;
-            &:nth-child(n+2) {
+
+    &:nth-child(n+2) {
         @include mi.marginPercent(254, 0, 0, 0, 0);
     }
-        &:nth-child(n+3) {
+
+    &:nth-child(n+3) {
         @include mi.marginPercent(254, 12, 0, 0, 0);
     }
+
     .h4PriceCnt {
-            @include mi.ontenerWidth(174, 280);
+        @include mi.ontenerWidth(174, 280);
     }
+
     .dottoPriceCnt {
-                    @include mi.ontenerWidth(174, 10);
+        @include mi.ontenerWidth(174, 10);
     }
+
     .txtPriceCnt {
-    @include mi.ontenerWidth(174, 85);
-    text-align: right;
+        @include mi.ontenerWidth(174, 85);
+        text-align: right;
     }
 }
 
 .liPriceCnt03 {
     width: 100%;
-            &:nth-child(n+2) {
+
+    &:nth-child(n+2) {
         @include mi.marginPercent(254, 12, 0, 0, 0);
     }
+
     .h4PriceCnt {
-            @include mi.ontenerWidth(254, 610);
+        @include mi.ontenerWidth(254, 610);
     }
+
     .dottoPriceCnt {
-                    @include mi.ontenerWidth(254, 10);
+        @include mi.ontenerWidth(254, 10);
     }
+
     .txtPriceCnt {
-    @include mi.ontenerWidth(254, 85);
-    text-align: right;
+        @include mi.ontenerWidth(254, 85);
+        text-align: right;
     }
 }
