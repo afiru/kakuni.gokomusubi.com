@@ -38,11 +38,11 @@ LAYOUT
 .h3AboutTitleFx01 {}
 
 .h3AboutTitleFx02 {
-   margin-top: 16px;
+    margin-top: 16px;
 }
 
 .h3AboutTitleFx03 {
-   margin-top: 32px;
+    margin-top: 32px;
 }
 
 .txtAboutTitleFx {
@@ -61,11 +61,15 @@ LAYOUT
 }
 
 .photoAboutStaff {
-    @include mi.ontenerWidth(335, 110);
+    @include mi.ontenerWidth(335, 100);
 }
 
 .secAboutStaff {
-    @include mi.ontenerWidth(335, 208);
+    @include mi.ontenerWidth(335, 245);
+
+    @include mi.mq(sp) {
+        @include mi.ontenerWidth(335, 225);
+    }
 
 }
 
@@ -75,39 +79,39 @@ LAYOUT
 }
 
 .txtSecAboutStaff {
-    @include mi.marginPercent(208, 12, 0, 0, 0);
-    @include mi.fontSizePc(11);
+    @include mi.marginPercent(204, 9, 0, 0, 0);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .ulSecAboutStaff {
-    @include mi.marginPercent(208, 20, 0, 0, 0);
+    @include mi.marginPercent(204, 12, 0, 0, 0);
 }
 
 .liSecAboutStaff {
     &:nth-child(n+2) {
-        @include mi.marginPercent(208, 12, 0, 0, 0);
+        @include mi.marginPercent(204, 8, 0, 0, 0);
     }
 }
 
 .h3LiSecAboutStaff {
-    @include mi.ontenerWidth(208, 71);
-    @include mi.fontSizePc(11);
+    @include mi.ontenerWidth(204, 68);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .dottoLiSecAboutStaff {
-    @include mi.ontenerWidth(208, 12);
-    @include mi.fontSizePc(11);
+    @include mi.ontenerWidth(204, 12);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .txtLiSecAboutStaff {
-    @include mi.ontenerWidth(208, 126);
-    @include mi.fontSizePc(11);
+    @include mi.ontenerWidth(204, 176);
+    @include mi.fontSizePc(10);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }

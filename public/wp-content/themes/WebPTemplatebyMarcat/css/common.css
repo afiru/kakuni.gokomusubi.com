@@ -940,14 +940,14 @@ LAYOUT
 
 .secBtmNavHeader02 {
   margin-top: 80px;
-  margin-bottom: 0px;
+  margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (max-width: 1199px) {
   .secBtmNavHeader02 {
     margin-top: 21.33%;
-    margin-bottom: 0%;
+    margin-bottom: 21.33%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -958,6 +958,7 @@ LAYOUT
   line-height: 1;
   letter-spacing: 0em;
   text-indent: 0em;
+  font-weight: 700;
 }
 @media screen and (max-width: 767px) {
   .h2BtmNavHeader {
@@ -1277,9 +1278,18 @@ LAYOUT
   right: 0;
   bottom: 0;
   top: 0;
-  aspect-ratio: 375/669;
+  aspect-ratio: 375/470;
 }
 .fvMovie iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.fvMovie video {
   position: absolute;
   left: 0;
   right: 0;
@@ -1407,6 +1417,7 @@ LAYOUT
   font-size: 12px;
   letter-spacing: 0em;
   text-indent: 0em;
+  line-height: 1.25;
 }
 @media screen and (max-width: 1199px) {
   .h3TopNewsLoop {
@@ -1626,20 +1637,30 @@ LAYOUT
 }
 
 .photoAboutStaff {
-  width: 110px;
+  width: 100px;
 }
 @media screen and (max-width: 1199px) {
   .photoAboutStaff {
-    width: 32.83%;
+    width: 29.85%;
   }
 }
 
 .secAboutStaff {
-  width: 208px;
+  width: 245px;
 }
 @media screen and (max-width: 1199px) {
   .secAboutStaff {
-    width: 62.08%;
+    width: 73.13%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .secAboutStaff {
+    width: 225px;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 1199px) {
+  .secAboutStaff {
+    width: 67.16%;
   }
 }
 
@@ -1655,23 +1676,23 @@ LAYOUT
 }
 
 .txtSecAboutStaff {
-  margin-top: 12px;
+  margin-top: 9px;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0em;
   text-indent: 0em;
 }
 @media screen and (max-width: 1199px) {
   .txtSecAboutStaff {
-    margin: 5.76% 0% 0% 0%;
+    margin: 4.41% 0% 0% 0%;
   }
 }
 @media screen and (max-width: 767px) {
   .txtSecAboutStaff {
-    font-size: 2.9333333333vw;
+    font-size: 2.6666666667vw;
   }
 }
 .txtSecAboutStaff::before {
@@ -1690,44 +1711,44 @@ LAYOUT
 }
 
 .ulSecAboutStaff {
-  margin-top: 20px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-@media screen and (max-width: 1199px) {
-  .ulSecAboutStaff {
-    margin: 9.61% 0% 0% 0%;
-  }
-}
-
-.liSecAboutStaff:nth-child(n+2) {
   margin-top: 12px;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
 }
 @media screen and (max-width: 1199px) {
+  .ulSecAboutStaff {
+    margin: 5.88% 0% 0% 0%;
+  }
+}
+
+.liSecAboutStaff:nth-child(n+2) {
+  margin-top: 8px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+@media screen and (max-width: 1199px) {
   .liSecAboutStaff:nth-child(n+2) {
-    margin: 5.76% 0% 0% 0%;
+    margin: 3.92% 0% 0% 0%;
   }
 }
 
 .h3LiSecAboutStaff {
-  width: 71px;
-  font-size: 11px;
+  width: 68px;
+  font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0em;
   text-indent: 0em;
 }
 @media screen and (max-width: 1199px) {
   .h3LiSecAboutStaff {
-    width: 34.13%;
+    width: 33.33%;
   }
 }
 @media screen and (max-width: 767px) {
   .h3LiSecAboutStaff {
-    font-size: 2.9333333333vw;
+    font-size: 2.6666666667vw;
   }
 }
 .h3LiSecAboutStaff::before {
@@ -1747,19 +1768,19 @@ LAYOUT
 
 .dottoLiSecAboutStaff {
   width: 12px;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0em;
   text-indent: 0em;
 }
 @media screen and (max-width: 1199px) {
   .dottoLiSecAboutStaff {
-    width: 5.76%;
+    width: 5.88%;
   }
 }
 @media screen and (max-width: 767px) {
   .dottoLiSecAboutStaff {
-    font-size: 2.9333333333vw;
+    font-size: 2.6666666667vw;
   }
 }
 .dottoLiSecAboutStaff::before {
@@ -1778,20 +1799,20 @@ LAYOUT
 }
 
 .txtLiSecAboutStaff {
-  width: 126px;
-  font-size: 11px;
+  width: 176px;
+  font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0em;
   text-indent: 0em;
 }
 @media screen and (max-width: 1199px) {
   .txtLiSecAboutStaff {
-    width: 60.57%;
+    width: 86.27%;
   }
 }
 @media screen and (max-width: 767px) {
   .txtLiSecAboutStaff {
-    font-size: 2.9333333333vw;
+    font-size: 2.6666666667vw;
   }
 }
 .txtLiSecAboutStaff::before {
@@ -1949,8 +1970,8 @@ LAYOUT
 
 .iconFloor {
   position: absolute;
-  right: 3.5%;
-  bottom: 3.5%;
+  right: 2%;
+  bottom: 2%;
   width: 24px;
 }
 @media screen and (max-width: 1199px) {
@@ -1997,7 +2018,7 @@ LAYOUT
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.7;
   letter-spacing: 0em;
   text-indent: 0em;
@@ -2012,7 +2033,7 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .txtLiFloor {
-    font-size: 2.9333333333vw;
+    font-size: 2.6666666667vw;
   }
 }
 
@@ -2132,6 +2153,24 @@ LAYOUT
   }
 }
 
+.mainTitlePriceFx {
+  width: 90px;
+}
+@media screen and (max-width: 1199px) {
+  .mainTitlePriceFx {
+    width: 25.35%;
+  }
+}
+
+.h2PriceTitle {
+  width: 39px;
+}
+@media screen and (max-width: 1199px) {
+  .h2PriceTitle {
+    width: 43.33%;
+  }
+}
+
 .txtPriceTitle {
   margin: 44.14% 0% 0% -5%;
   width: 34px;
@@ -2169,7 +2208,13 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .txtPriceTitle {
-    margin: 44.14% 0% 0% 32%;
+    width: 34px;
+    margin: 44.14% 0% 0% 0%;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 1199px) {
+  .txtPriceTitle {
+    width: 37.77%;
   }
 }
 
@@ -2779,6 +2824,12 @@ LAYOUT
   position: relative;
   aspect-ratio: 355/181;
   overflow: hidden;
+  border-radius: 8px;
+  /* CSS3草案 */
+  -webkit-border-radius: 8px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 8px;
+  /* Firefox用 */
 }
 @media screen and (max-width: 1199px) {
   .accessMap {
@@ -3675,6 +3726,21 @@ LAYOUT
 }
 @media screen and (max-width: 1199px) {
   .cntSingleCat img {
+    margin-top: 2.38%;
+    margin-bottom: 2.38%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.cntSingleCat iframe {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+@media screen and (max-width: 1199px) {
+  .cntSingleCat iframe {
     margin-top: 2.38%;
     margin-bottom: 2.38%;
     margin-left: auto;

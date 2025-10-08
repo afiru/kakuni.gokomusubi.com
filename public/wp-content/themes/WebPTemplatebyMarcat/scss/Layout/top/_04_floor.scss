@@ -49,8 +49,8 @@ LAYOUT
 
 .iconFloor {
     position: absolute;
-    right: 3.5%;
-    bottom: 3.5%;
+    right: 2%;
+    bottom: 2%;
     @include mi.ontenerWidth(166, 24);
 }
 
@@ -73,7 +73,7 @@ LAYOUT
 
 .txtLiFloor {
     @include mi.marginPercent(166, 4, auto, 0, auto);
-    @include mi.fontSizePc(11);
+    @include mi.fontSizePc(10);
     line-height: 1.7;
     @include mi.letterSpacing(0);
 }
