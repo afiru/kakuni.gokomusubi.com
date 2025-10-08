@@ -71,8 +71,6 @@
                     </li>
                 </ul>
             </div>
-
-
         </div>
         <div class="accessMap">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.026446088867!2d135.05274647574132!3d34.62877197294538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600083bd4ddc1f13%3A0xc432e2266cbe1fcc!2z44CSNjU1LTA4OTIg5YW15bqr55yM56We5oi45biC5Z6C5rC05Yy65bmz56Ov77yU5LiB55uu77yU4oiS77yR77yUIDHpmo4!5e0!3m2!1sja!2sjp!4v1759401053695!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

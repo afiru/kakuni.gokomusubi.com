@@ -61,11 +61,12 @@ LAYOUT
 }
 
 .photoAboutStaff {
-    @include mi.ontenerWidth(335, 140);
+    @include mi.ontenerWidth(335, 110);
 }
 
 .secAboutStaff {
-    width: 54.7%;
+    @include mi.ontenerWidth(335, 208);
+
 }
 
 .h2SecAboutStaff {
@@ -74,39 +75,39 @@ LAYOUT
 }
 
 .txtSecAboutStaff {
-    @include mi.marginPercent(204, 9, 0, 0, 0);
-    @include mi.fontSizePc(12);
+    @include mi.marginPercent(208, 12, 0, 0, 0);
+    @include mi.fontSizePc(11);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .ulSecAboutStaff {
-    @include mi.marginPercent(204, 12, 0, 0, 0);
+    @include mi.marginPercent(208, 20, 0, 0, 0);
 }
 
 .liSecAboutStaff {
     &:nth-child(n+2) {
-        @include mi.marginPercent(204, 8, 0, 0, 0);
+        @include mi.marginPercent(208, 12, 0, 0, 0);
     }
 }
 
 .h3LiSecAboutStaff {
-    @include mi.ontenerWidth(204, 53);
-    @include mi.fontSizePc(12);
+    @include mi.ontenerWidth(208, 71);
+    @include mi.fontSizePc(11);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .dottoLiSecAboutStaff {
-    @include mi.ontenerWidth(204, 16);
-    @include mi.fontSizePc(12);
+    @include mi.ontenerWidth(208, 12);
+    @include mi.fontSizePc(11);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
 
 .txtLiSecAboutStaff {
-    @include mi.ontenerWidth(204, 126);
-    @include mi.fontSizePc(12);
+    @include mi.ontenerWidth(208, 126);
+    @include mi.fontSizePc(11);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(0);
 }
