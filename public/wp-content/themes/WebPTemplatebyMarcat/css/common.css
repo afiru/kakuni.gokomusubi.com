@@ -2912,19 +2912,19 @@ LAYOUT
   bottom: 11%;
   position: sticky;
   right: 2%;
-  width: 38px;
+  width: 45px;
   margin: 0 0 0 auto;
   transition-duration: 0.5s;
 }
 @media screen and (max-width: 1199px) {
   .btnFooter {
-    width: 10.13%;
+    width: 12%;
   }
 }
 
 .btnFooter a {
   display: block;
-  width: 38px;
+  width: 45px;
   transition: transform 0.5s ease, opacity 0.5s ease;
   opacity: 0.8;
   /* 初期値 */
@@ -2939,16 +2939,28 @@ LAYOUT
   opacity: 1;
   transform: rotate(360deg) scale(1.2);
 }
+.btnFooter a img {
+  width: 100%;
+}
 
 .footer {
+  margin-top: -50px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 0px;
   padding-right: 0px;
   font-size: 10px;
-  line-height: 1;
+  line-height: 1.5;
   letter-spacing: 0em;
   text-indent: 0em;
+}
+@media screen and (max-width: 1199px) {
+  .footer {
+    margin: -13.34% 0% 0% 0%;
+  }
 }
 @media screen and (max-width: 1199px) {
   .footer {
@@ -2964,14 +2976,14 @@ LAYOUT
   display: block;
   width: 0;
   height: 0;
-  margin-top: calc((1 - 1) * 0.5em);
+  margin-top: calc((1 - 1.5) * 0.5em);
   content: "";
 }
 .footer::after {
   display: block;
   width: 0;
   height: 0;
-  margin-bottom: calc((1 - 1) * 0.5em);
+  margin-bottom: calc((1 - 1.5) * 0.5em);
   content: "";
 }
 
