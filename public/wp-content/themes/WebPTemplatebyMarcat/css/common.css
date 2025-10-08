@@ -2429,14 +2429,14 @@ LAYOUT
   }
 }
 .liPriceCnt02:nth-child(n+3) {
-  margin-top: 12px;
+  margin-top: 8px;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
 }
 @media screen and (max-width: 1199px) {
   .liPriceCnt02:nth-child(n+3) {
-    margin: 4.72% 0% 0% 0%;
+    margin: 3.14% 0% 0% 0%;
   }
 }
 .liPriceCnt02 .h4PriceCnt {
@@ -2656,7 +2656,7 @@ LAYOUT
 
 .mainAccess {
   width: 289px;
-  margin: -5% auto 0 0;
+  margin: -32% auto 0 0;
 }
 @media screen and (max-width: 1199px) {
   .mainAccess {
