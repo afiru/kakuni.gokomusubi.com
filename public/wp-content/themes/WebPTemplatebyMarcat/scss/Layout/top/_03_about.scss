@@ -27,7 +27,7 @@ LAYOUT
 .h3AboutTitleFx {
     @include mi.fontSizePc(15);
     @include mi.lineheight(15, 24);
-    @include mi.letterSpacing(4);
+    @include mi.letterSpacing(400);
     writing-mode: vertical-rl;
     text-orientation: upright;
     justify-content: space-between;
