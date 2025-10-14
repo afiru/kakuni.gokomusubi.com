@@ -1528,8 +1528,8 @@ LAYOUT
 .h3AboutTitleFx {
   font-size: 15px;
   line-height: 1.6;
-  letter-spacing: 0em;
-  text-indent: 0em;
+  letter-spacing: 0.004em;
+  text-indent: -0.004em;
   writing-mode: vertical-rl;
   text-orientation: upright;
   justify-content: space-between;
