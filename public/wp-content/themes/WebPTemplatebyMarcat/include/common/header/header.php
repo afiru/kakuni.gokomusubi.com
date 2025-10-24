@@ -29,10 +29,48 @@
     <?php //タイトルの設定。【トップページ】カスタマイザーのSEOタイトル　【下層】ページタイトル｜カスタマイザーのSEOタイトル　
   ?>
     <title><?php echo get_the_site_title(get_php_customzer('seo_title')); ?></title>
-    <?php if (is_single() and !empty(scf::get('jsonld'))): ?>
 
+    <?php if (is_single()): ?>
+    <?php
+    $the_content = get_post(get_the_ID())->post_content;
+    $the_content = strip_tags($the_content);
+    $the_content = stripslashes($the_content);
+    $the_content = preg_replace('/(\s\s|　)/', '', $the_content);
+    $the_content = preg_replace("/^\xC2\xA0/", "", $the_content);
+    $the_content = str_replace("&nbsp;", '', $the_content);
+    $img = get_post_thumbsdata(get_the_ID());
+    $ogthumbs = get_aioseo_global_og_image();
+    if (!empty($img)) {
+      $ogthumbs = $img[0];
+    } else {
+      $ogthumbs = $ogthumbs;
+    }
+    ?>
     <script type="application/ld+json">
-    <?php echo scf::get('jsonld'); ?>
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "<?php echo get_the_title(get_the_ID()); ?>",
+        "description": "<?php echo $the_content; ?>",
+        "author": {
+            "@type": "Person",
+            "name": "<?php echo bloginfo('name'); ?>"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "<?php echo bloginfo('name'); ?>",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "<?php echo $ogthumbs; ?>"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "<?php echo home_url('/'); ?>"
+        },
+        "datePublished": "<?php echo get_the_date('y-m-d'); ?>",
+        "dateModified": "<?php echo get_the_date('y-m-d'); ?>"
+    }
     </script>
     <?php endif; ?>
 

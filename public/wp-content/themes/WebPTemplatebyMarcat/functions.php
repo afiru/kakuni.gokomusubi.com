@@ -254,3 +254,33 @@ function getNewSingleColumn($date)
         echo '<span class="bg_CB644A cl_fff fw_400 d_felx j_center ali_center en txtset iconSingleColumn">NEW!</span>';
     }
 }
+
+
+function get_aioseo_global_og_image()
+{
+    $json = get_option('aioseo_options');
+
+    // JSONをデコード（配列に変換）
+    $aioseo = json_decode($json, true);
+    if (!is_array($aioseo)) {
+        return false;
+    }
+
+    // Facebookデフォルト画像をチェック
+    if (
+        isset($aioseo['social']['facebook']['general']['defaultImagePosts'])
+        && !empty($aioseo['social']['facebook']['general']['defaultImagePosts'])
+    ) {
+        return esc_url($aioseo['social']['facebook']['general']['defaultImagePosts']);
+    }
+
+    // Twitter側も確認（同じ画像設定があるため）
+    if (
+        isset($aioseo['social']['twitter']['general']['defaultImagePosts'])
+        && !empty($aioseo['social']['twitter']['general']['defaultImagePosts'])
+    ) {
+        return esc_url($aioseo['social']['twitter']['general']['defaultImagePosts']);
+    }
+
+    return false;
+}
