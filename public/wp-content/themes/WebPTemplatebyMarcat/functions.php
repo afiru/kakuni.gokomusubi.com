@@ -284,3 +284,50 @@ function get_aioseo_global_og_image()
 
     return false;
 }
+
+add_action('wp_head', function () {
+    if (is_category('news')) { // ニュースカテゴリページだけ
+        global $wp_query;
+
+        $paged = max(1, get_query_var('paged')); // 現在ページ番号
+        $posts_per_page = get_query_var('posts_per_page'); // 1ページの記事数
+        $start_position = ($paged - 1) * $posts_per_page + 1;
+
+        $itemList = [];
+        $position = $start_position;
+
+        if (have_posts()) :
+            while (have_posts()) : the_post();
+                // アイキャッチ画像
+                if (has_post_thumbnail()) {
+                    $image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                } else {
+                    if (function_exists('get_aioseo_global_og_image')) {
+                        $image = get_aioseo_global_og_image();
+                    } else {
+                        $image = '';
+                    }
+                }
+
+                $itemList[] = [
+                    "@type" => "ListItem",
+                    "position" => $position,
+                    "url" => get_permalink(),
+                    "name" => get_the_title(),
+                    "image" => $image,
+                    "datePublished" => get_the_date('c') // ISO 8601形式
+                ];
+                $position++;
+            endwhile;
+            wp_reset_postdata();
+        endif;
+
+        $jsonld = [
+            "@context" => "https://schema.org",
+            "@type" => "ItemList",
+            "itemListElement" => $itemList
+        ];
+
+        echo '<script type="application/ld+json">' . wp_json_encode($jsonld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . '</script>';
+    }
+});
