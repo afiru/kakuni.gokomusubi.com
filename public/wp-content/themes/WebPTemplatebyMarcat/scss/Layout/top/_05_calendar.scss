@@ -6,14 +6,84 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
-.calendar {
+.calendarLxn {
     @include mi.marginPercent(375, 80, auto, 0, auto);
+    aspect-ratio: 1080 / 1350;
 }
+
+
 
 .h2Calendar {
     @include mi.fontSizePc(20);
     @include mi.lineheight(20, 25);
     @include mi.letterSpacing(40);
+}
+
+.title_main_sidebar_eventcalendar_lxc {
+    @include mi.marginPercent(375, 40, auto, 0, auto);
+
+    .prev_sidebar_eventcalendar {
+        @include mi.fontSizePc(16);
+        @include mi.lineheight(20, 25);
+        @include mi.letterSpacing(40);
+        cursor: pointer;
+    }
+
+    .momtheventcalendar {
+        @include mi.fontSizePc(16);
+        @include mi.lineheight(20, 25);
+        @include mi.letterSpacing(40);
+        @include mi.marginPercent(375, 0, 30, 0, 30);
+    }
+
+    .next_sidebar_eventcalendar {
+        @include mi.fontSizePc(16);
+        @include mi.lineheight(20, 25);
+        @include mi.letterSpacing(40);
+        cursor: pointer;
+    }
+}
+
+.main_sidebar_eventcalendar {
+    @include mi.marginPercent(375, 16, auto, 0, auto);
+    @include mi.ontenerWidth(375, 335);
+
+    table {
+        @include mi.fontSizePc(14);
+        width: 100%;
+        table-layout: fixed;
+
+        th,
+        td {
+            @include mi.fontSizePc(16);
+            border: 1px solid #000;
+            aspect-ratio: 1 / 1;
+            height: 50px;
+            @include mi.paddingPercent(355, 8, 8, 8, 8);
+
+            img {
+                @include mi.marginPercent(50.7142857143, 4, auto, 0, auto);
+                width: 60%;
+            }
+
+            p {
+                @include mi.fontSizePc(10);
+                @include mi.lineheight(20, 25);
+                @include mi.letterSpacing(0);
+                font-weight: 700;
+            }
+        }
+
+        th {
+            vertical-align: middle;
+            font-weight: 700;
+        }
+
+        .sun,
+        .sat {
+            color: #FF0000;
+        }
+    }
 }
 
 .picCalendar {

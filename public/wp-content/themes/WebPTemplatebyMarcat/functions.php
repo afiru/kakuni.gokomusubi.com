@@ -331,3 +331,222 @@ add_action('wp_head', function () {
         echo '<script type="application/ld+json">' . wp_json_encode($jsonld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . '</script>';
     }
 });
+
+
+//カレンダー
+add_action('init', 'calendar_init');
+function calendar_init()
+{
+    $labels = array(
+        'name'               => _x('calendar', 'post type general name', 'your-plugin-textdomain'),
+        'singular_name'      => _x('calendar', 'post type singular name', 'your-plugin-textdomain'),
+        'menu_name'          => _x('calendar', 'your-plugin-textdomain'),
+        'name_admin_bar'     => _x('calendar', 'add new on admin bar', 'your-plugin-textdomain'),
+        'add_new'            => _x('calendarを新規登録', 'blog', 'your-plugin-textdomain'),
+        'add_new_item'       => __('calendarを新規登録', 'your-plugin-textdomain'),
+        'new_item'           => __('calendarを新規登録', 'your-plugin-textdomain'),
+        'edit_item'          => __('calendarを編集', 'your-plugin-textdomain'),
+        'view_item'          => __('calendarを見る', 'your-plugin-textdomain'),
+        'all_items'          => __('すべてのcalendar', 'your-plugin-textdomain'),
+        'search_items'       => __('calendarを探す', 'your-plugin-textdomain'),
+        'parent_item_colon'  => __('Parent calendar:', 'your-plugin-textdomain'),
+        'not_found'          => __('No books found.', 'your-plugin-textdomain'),
+        'not_found_in_trash' => __('No books found in Trash.', 'your-plugin-textdomain')
+    );
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'calendar'),
+        'capability_type'    => 'post',
+        'show_in_rest' => true,
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 4,
+        'supports'           => array('title', 'thumbnail')
+    );
+    register_post_type('calendar', $args);
+}
+function create_calendar_taxonomy()
+{
+    register_taxonomy(
+        'calendar_category',
+        'calendar',
+        array(
+            'show_in_rest' => true,
+            'label' => __('カレンダー区分'), //管理画面に表示されるラベル
+            'hierarchical' => true //trueだとカテゴリー、falseだとタグ
+        )
+    );
+}
+add_action('init', 'create_calendar_taxonomy');
+
+
+class MarcatCalendarsAPI
+{
+    private $year;
+    private $month;
+    private $year_month;
+    private $year_month_posts;
+    private $post_data;
+    private $start_year_month;
+    private $end_year_month;
+    private $json;
+    public function __construct()
+    {
+        add_action('rest_api_init',  array($this, 'MarcatCalendarsAPISetting'));
+    }
+    public function MarcatCalendarsAPISetting()
+    {
+        register_rest_route('wp/v2', '/MarcatCalendarsAPI/', array(
+            'methods' => 'GET',
+            'callback' => array($this, 'MarcatCalendarsAPIFc'),
+            'args' => array(
+                'year' => array(
+                    'required' => true,
+                ),
+                'month' => array(
+                    'required' => true,
+                ),
+            ),
+        ));
+    }
+    public function MarcatCalendarsAPIFc($data)
+    {
+        $this->year = htmlspecialchars(esc_attr($data['year']));
+        $this->month = htmlspecialchars(esc_attr($data['month']));
+        $this->year_month = $this->year . '-' . $this->month;
+        $this->start_year_month = $this->year . '-' . $this->month . '-01';
+        $this->end_year_month = $this->year . '-' . $this->month . '-31';
+        $this->year_month_posts = $this->GetMarcatCalendarsPosts();
+        $html = $this->SetCalendars();
+        $setdate = $this->year . '-' . sprintf('%02d', $this->month) . '-01  -1 month';
+        $this->json['prev']['y'] = date('Y', strtotime($setdate));
+        $this->json['prev']['m'] = date('m', strtotime($setdate));
+        $setdate = $this->year . '-' . sprintf('%02d', $this->month) . '-01  +1 month';
+        $this->json['next']['y'] = date('Y', strtotime($setdate));
+        $this->json['next']['m'] = date('m', strtotime($setdate));
+        $this->json['title'] = $this->year . '年' . $this->month . '月';
+        $this->json['html'] = $html;
+        $this->json['sql'] = $this->NowSQL();
+        return $this->json;
+    }
+    public function NowSQL()
+    {
+        global $wpdb;
+        $sql = "SELECT post_id,meta_key,meta_value,post_status FROM `" . $wpdb->postmeta . "` INNER JOIN " . $wpdb->posts . " ON `" . $wpdb->postmeta . "`.post_id = `" . $wpdb->posts . "`.ID WHERE `" . $wpdb->posts . "`.`post_status` = 'publish' AND `" . $wpdb->postmeta . "`.`meta_value` BETWEEN '" . $this->start_year_month . "' AND '" . $this->end_year_month . "'  AND `wp_postmeta`.`meta_key` = 'eventdate' ORDER BY `wp_posts`.`menu_order` ASC";
+        return $sql;
+    }
+    public function GetMarcatCalendarsPosts()
+    {
+        global $wpdb;
+        $sql = "SELECT post_id,meta_key,meta_value,post_status FROM `" . $wpdb->postmeta . "` INNER JOIN " . $wpdb->posts . " ON `" . $wpdb->postmeta . "`.post_id = `" . $wpdb->posts . "`.ID WHERE `" . $wpdb->posts . "`.`post_status` = 'publish' AND `" . $wpdb->postmeta . "`.`meta_value` BETWEEN '" . $this->start_year_month . "' AND '" . $this->end_year_month . "'  AND `wp_postmeta`.`meta_key` = 'eventdate' ORDER BY `wp_posts`.`menu_order` ASC";
+        $posts = $wpdb->get_results($sql);
+
+        foreach ($posts as $post) {
+            $post_id = $post->post_id;
+            $post_data[$post->meta_value][] = $post_id;
+        }
+        if (empty($post_data)) {
+            $post_data = "";
+        } else {
+            $post_data = $post_data;
+        }
+        return $post_data;
+    }
+
+    public function SetCalendars()
+    {
+        $year = date($this->year);
+        $month = date($this->month);
+        //月末日を取得
+        //月末日を取得
+        $end_month = date('t', strtotime($year . $month . '01'));
+        //1日の曜日を取得
+        $first_week = date('w', strtotime($year . $month . '01'));
+        //月末日の曜日を取得
+        $last_week = date('w', strtotime($year . $month . $end_month));
+
+        $aryCalendar = [];
+        $j = 0;
+
+        //1日開始曜日までの穴埋め
+        for ($i = 0; $i < $first_week; $i++) {
+            $aryCalendar[$j][] = '';
+        }
+
+        //1日から月末日までループ
+        for ($i = 1; $i <= $end_month; $i++) {
+            //日曜日まで進んだら改行
+            if (isset($aryCalendar[$j]) && count($aryCalendar[$j]) === 7) {
+                $j++;
+            }
+            $aryCalendar[$j][] = $i;
+        }
+
+        //月末曜日の穴埋め
+        for ($i = count($aryCalendar[$j]); $i < 7; $i++) {
+            $aryCalendar[$j][] = '';
+        }
+
+        $aryWeek = ['日', '月', '火', '水', '木', '金', '土'];
+
+        $Calendar  =    '<table class="calendar">';
+        $Calendar .=    '<tr>';
+        foreach ($aryWeek as $week) {
+            if ($week === '日') {
+                $Calendar .= '<th class="sun">' . $week . '</th>';
+            } elseif ($week === '土') {
+                $Calendar .= '<th class="sat">' . $week . '</th>';
+            } else {
+                $Calendar .= '<th>' . $week . '</th>';
+            }
+        }
+        $Calendar .=    '</tr>';
+        foreach ($aryCalendar as $tr) {
+            $Calendar .=    '<tr>';
+            foreach ($tr as $td) {
+                $Calendar .= '<td class="date">';
+                $Calendar .= $td;
+                $Calendar .= $this->SetCalendarPosts($year, $month, $td);
+                $Calendar .= '</td>';
+            }
+            $Calendar .=    '</tr>';
+        }
+        $Calendar .=    '</table>';
+        return $Calendar;
+    }
+
+    public function SetCalendarPosts($year = 0, $month = 0, $date = 0)
+    {
+        $date = sprintf('%02d', $date);
+
+        $date = $year . '-' . $month . '-' . $date;
+
+        if (!empty($this->year_month_posts[$date])) {
+            $events = '<div class="display_flex_stretch display_row">';
+            foreach ($this->year_month_posts[$date] as $id) {
+                $myfield = get_post_thumbsdata($id);
+                $posttype = get_post_type($id);
+                if (!empty($myfield[0])) {
+                    if ($posttype === "post") {
+                        $events .= '<a href="' . get_permalink($id) . '">';
+                        $events .= '<img src="' . $myfield[0] . '" width="' . $myfield[1] . '" height="' . $myfield[2] . '" alt="' . $posttype . get_the_title($id) . '">';
+                        $events .= '</a>';
+                    } else {
+                        $events .= '<img src="' . $myfield[0] . '" width="' . $myfield[1] . '" height="' . $myfield[2] . '" alt="' . $posttype . get_the_title($id) . '">';
+                        $events .= '<p class="cl_FF0000 fw_400 t_center">お休み</p>';
+                    }
+                }
+            }
+            $events .= '</div>';
+        } else {
+            $events = "";
+        }
+        return $events;
+    }
+}
+$MarcatCalendarsAPI = new MarcatCalendarsAPI();
