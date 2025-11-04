@@ -3474,6 +3474,318 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
+.booking {
+  margin-top: 80px;
+  margin-bottom: 114px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1199px) {
+  .booking {
+    margin-top: 21.33%;
+    margin-bottom: 30.4%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.secBooking {
+  width: 355px;
+  margin: auto;
+}
+@media screen and (max-width: 1199px) {
+  .secBooking {
+    width: 94.66%;
+  }
+}
+
+.h2Booking {
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-indent: -0.04em;
+}
+@media screen and (max-width: 767px) {
+  .h2Booking {
+    font-size: 5.3333333333vw;
+  }
+}
+.h2Booking::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 1.25) * 0.5em);
+  content: "";
+}
+.h2Booking::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 1.25) * 0.5em);
+  content: "";
+}
+
+.formBooking {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1199px) {
+  .formBooking {
+    margin-top: 11.26%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.liFormCnt {
+  flex-flow: row wrap;
+  align-items: center;
+}
+.liFormCnt:nth-child(n+2) {
+  margin-top: 8px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+@media screen and (max-width: 1199px) {
+  .liFormCnt:nth-child(n+2) {
+    margin: 2.25% 0% 0% 0%;
+  }
+}
+
+.h3liFormCnt {
+  width: 110px;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-indent: 0em;
+}
+@media screen and (max-width: 1199px) {
+  .h3liFormCnt {
+    width: 30.98%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .h3liFormCnt {
+    font-size: 2.9333333333vw;
+  }
+}
+.h3liFormCnt::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 1) * 0.5em);
+  content: "";
+}
+.h3liFormCnt::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 1) * 0.5em);
+  content: "";
+}
+
+.formInputCnt {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 245px;
+}
+@media screen and (max-width: 1199px) {
+  .formInputCnt {
+    margin: 0% 0% 0% 0%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .formInputCnt {
+    width: 69.01%;
+  }
+}
+
+.inputW100 {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+}
+@media screen and (max-width: 1199px) {
+  .inputW100 {
+    padding: 2.25% 2.25% 2.25% 2.25%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .inputW100 {
+    font-size: 2.9333333333vw;
+  }
+}
+
+.selectW100 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 100%;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+}
+@media screen and (max-width: 1199px) {
+  .selectW100 {
+    padding: 2.25% 2.25% 2.25% 2.25%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .selectW100 {
+    font-size: 2.9333333333vw;
+  }
+}
+
+.liFormCnt:last-child {
+  margin-top: 18px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+@media screen and (max-width: 1199px) {
+  .liFormCnt:last-child {
+    margin: 5.07% 0% 0% 0%;
+  }
+}
+
+.liFormCnt:last-child .h3liFormCnt {
+  width: 100%;
+}
+
+.liFormCnt:last-child .formInputCnt100 {
+  width: 100%;
+}
+
+.txtw100 {
+  width: 100%;
+  margin-top: 11px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  aspect-ratio: 355/180;
+}
+@media screen and (max-width: 1199px) {
+  .txtw100 {
+    margin-top: 3.09%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .txtw100 {
+    padding: 2.25% 2.25% 2.25% 2.25%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .txtw100 {
+    font-size: 2.9333333333vw;
+  }
+}
+
+.btnToConfirmLxn {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+@media screen and (max-width: 1199px) {
+  .btnToConfirmLxn {
+    margin-top: 11.26%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btnToConfirm {
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-indent: 0em;
+  aspect-ratio: 355/48;
+  width: 100%;
+  background: #000000;
+  color: #FFF;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .btnToConfirm {
+    font-size: 4.2666666667vw;
+  }
+}
+.btnToConfirm::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 1) * 0.5em);
+  content: "";
+}
+.btnToConfirm::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 1) * 0.5em);
+  content: "";
+}
+
+/* ==========================================================================
+use＆nameSpace
+========================================================================== */
+/* ==========================================================================
+use＆nameSpace
+========================================================================== */
+/* ==========================================================================
+LAYOUT
+========================================================================== */
 .catFv {
   aspect-ratio: 375/108;
   width: 100%;
