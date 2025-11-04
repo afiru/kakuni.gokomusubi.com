@@ -537,7 +537,7 @@ class MarcatCalendarsAPI
                         $events .= '</a>';
                     } else {
                         $events .= '<img src="' . $myfield[0] . '" width="' . $myfield[1] . '" height="' . $myfield[2] . '" alt="' . $posttype . get_the_title($id) . '">';
-                        $events .= '<p class="cl_FF0000 fw_400 t_center">お休み</p>';
+                        $events .= '<p class="cl_FF0000 fw_400 t_center">' . get_the_title($id) . '</p>';
                     }
                 }
             }
