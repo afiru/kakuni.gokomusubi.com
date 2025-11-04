@@ -3777,6 +3777,222 @@ LAYOUT
   content: "";
 }
 
+.bookingConfirm .formInputCnt {
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+}
+@media screen and (max-width: 767px) {
+  .bookingConfirm .formInputCnt {
+    font-size: 2.9333333333vw;
+  }
+}
+.bookingConfirm .formInputCnt100 {
+  margin-top: 18px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+@media screen and (max-width: 1199px) {
+  .bookingConfirm .formInputCnt100 {
+    margin: 5.07% 0% 0% 0%;
+  }
+}
+
+.toThankBackLxn {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+@media screen and (max-width: 1199px) {
+  .toThankBackLxn {
+    margin-top: 11.26%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btnBackLxn {
+  width: 161px;
+  margin: auto;
+}
+@media screen and (max-width: 1199px) {
+  .btnBackLxn {
+    width: 45.35%;
+  }
+}
+
+.btnBack {
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-indent: 0em;
+  aspect-ratio: 161/40;
+  background: #FFF;
+  color: #000 !important;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .btnBack {
+    font-size: 4.2666666667vw;
+  }
+}
+.btnBack::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 1) * 0.5em);
+  content: "";
+}
+.btnBack::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 1) * 0.5em);
+  content: "";
+}
+
+.btnToThanksLxn {
+  width: 100%;
+  margin-top: 23px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1199px) {
+  .btnToThanksLxn {
+    margin-top: 6.47%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btnToThanks {
+  width: 100%;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-indent: 0em;
+  aspect-ratio: 355/48;
+  background: #000000;
+  color: #FFF;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .btnToThanks {
+    font-size: 4.2666666667vw;
+  }
+}
+.btnToThanks::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 1) * 0.5em);
+  content: "";
+}
+.btnToThanks::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 1) * 0.5em);
+  content: "";
+}
+
+.txtBooking {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+}
+@media screen and (max-width: 1199px) {
+  .txtBooking {
+    margin-top: 11.26%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .txtBooking {
+    font-size: 2.9333333333vw;
+  }
+}
+
+.toTopLxn {
+  width: 100%;
+  margin-top: 23px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1199px) {
+  .toTopLxn {
+    margin-top: 6.47%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btnToTopLxn {
+  width: 100%;
+  border-radius: 5px;
+  /* CSS3草案 */
+  -webkit-border-radius: 5px;
+  /* Safari,Google Chrome用 */
+  -moz-border-radius: 5px;
+  /* Firefox用 */
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-indent: 0em;
+  aspect-ratio: 355/48;
+  background: #000000;
+  color: #FFF;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .btnToTopLxn {
+    font-size: 4.2666666667vw;
+  }
+}
+.btnToTopLxn::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 1) * 0.5em);
+  content: "";
+}
+.btnToTopLxn::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 1) * 0.5em);
+  content: "";
+}
+
 /* ==========================================================================
 use＆nameSpace
 ========================================================================== */

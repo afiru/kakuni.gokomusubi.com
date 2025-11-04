@@ -10,8 +10,8 @@ LAYOUT
 @include mi.marginPercent(375, 80, auto, 114, auto);
 }
 .secBooking{
-@include mi.ontenerWidth( 375, 355 );
-margin: auto;
+    @include mi.ontenerWidth( 375, 355 );
+    margin: auto;
 }
 .h2Booking{
     @include mi.fontSizePc(20);
@@ -92,6 +92,84 @@ margin: auto;
     @include mi.letterSpacing(0);
     aspect-ratio: 355/48;
     width: 100%;
+    background: #000000;
+    color: #FFF;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+//確認
+.bookingConfirm{
+    .formInputCnt{
+         @include mi.fontSizePc(11);
+        line-height: 1.5;
+        letter-spacing: 0em;
+    }
+    .formInputCnt100{
+        @include mi.marginPercent(355, 18, 0, 0, 0);
+    }
+}
+
+.toThankBackLxn{
+    @include mi.marginPercent(355, 40, auto, 0, auto);
+    width: 100%;
+}
+.toThankBackFx{
+
+}
+.btnBackLxn{
+    @include mi.ontenerWidth( 355, 161 );
+    margin: auto;
+}
+.btnBack{
+     @include mi.kadomaru(5px);
+    @include mi.fontSizePc(16);
+    @include mi.lineheight(16,16);
+    @include mi.letterSpacing(0);
+    aspect-ratio: 161/40;
+    background: #FFF;
+    color: #000 !important;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.btnToThanksLxn{
+    width: 100%;
+    @include mi.marginPercent(355,23, auto, 0, auto);
+}
+
+.btnToThanks{
+    width: 100%;
+     @include mi.kadomaru(5px);
+    @include mi.fontSizePc(16);
+    @include mi.lineheight(16,16);
+    @include mi.letterSpacing(0);
+    aspect-ratio: 355/48;
+    background: #000000;
+    color: #FFF;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+//完了
+.txtBooking{
+    @include mi.marginPercent(355, 40, auto, 0, auto);
+     @include mi.fontSizePc(11);
+     line-height: 1.5;
+    letter-spacing: 0em;
+}
+
+.toTopLxn{
+    width: 100%;
+    @include mi.marginPercent(355,23, auto, 0, auto);
+}
+.btnToTopLxn{
+     width: 100%;
+     @include mi.kadomaru(5px);
+    @include mi.fontSizePc(16);
+    @include mi.lineheight(16,16);
+    @include mi.letterSpacing(0);
+    aspect-ratio: 355/48;
     background: #000000;
     color: #FFF;
     border: 1px solid #000;
