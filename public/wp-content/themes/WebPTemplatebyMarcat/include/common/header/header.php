@@ -90,7 +90,7 @@
     var calendar_y = "<?php echo date('Y'); ?>";
     var calendar_m = "<?php echo date('m'); ?>";
     /*
-        <?php foreach (scf::get('eventdates', 226) as $fields): ?>
+        <?php foreach (scf::get('eventdates', 219) as $fields): ?>
             <?php $result[] = '"' . date("md", strtotime($fields['eventdate'])) . '"'; ?>
         <?php endforeach; ?>
         */
