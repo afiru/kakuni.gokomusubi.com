@@ -1399,7 +1399,7 @@ LAYOUT
 }
 
 .h3liNowNewsCnt {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0em;
   text-indent: 0em;
   line-height: 1.25;
@@ -1407,12 +1407,12 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .h3liNowNewsCnt {
-    font-size: 2.6666666667vw;
+    font-size: 3.2vw;
   }
 }
 
 .txtliNowNewsCnt {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0em;
   text-indent: 0em;
   line-height: 1.25;
@@ -1420,7 +1420,7 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .txtliNowNewsCnt {
-    font-size: 2.6666666667vw;
+    font-size: 3.2vw;
   }
 }
 
@@ -1429,7 +1429,7 @@ LAYOUT
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0em;
   text-indent: 0em;
   line-height: 1.25;
@@ -1441,7 +1441,7 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .txtNowNewsCnt {
-    font-size: 2.6666666667vw;
+    font-size: 3.2vw;
   }
 }
 
@@ -1505,24 +1505,24 @@ LAYOUT
 }
 
 .timeTopNewsLoop {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0em;
   text-indent: 0em;
 }
 @media screen and (max-width: 767px) {
   .timeTopNewsLoop {
-    font-size: 2.6666666667vw;
+    font-size: 3.2vw;
   }
 }
 
 .newTopAppivalTop {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0em;
   text-indent: 0em;
 }
 @media screen and (max-width: 767px) {
   .newTopAppivalTop {
-    font-size: 2.6666666667vw;
+    font-size: 3.2vw;
   }
 }
 
@@ -1531,7 +1531,7 @@ LAYOUT
   margin-bottom: 0px;
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0em;
   text-indent: 0em;
 }
@@ -1542,7 +1542,7 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .catTopNewsLoop {
-    font-size: 2.6666666667vw;
+    font-size: 3.2vw;
   }
 }
 

@@ -39,14 +39,14 @@ LAYOUT
 }
 
 .h3liNowNewsCnt {
-    @include mi.fontSizePc(10);
+    @include mi.fontSizePc(12);
     @include mi.letterSpacing(0);
     line-height: 1.25;
     white-space: nowrap;
 }
 
 .txtliNowNewsCnt {
-    @include mi.fontSizePc(10);
+    @include mi.fontSizePc(12);
     @include mi.letterSpacing(0);
     line-height: 1.25;
     white-space: nowrap;
@@ -54,7 +54,7 @@ LAYOUT
 
 .txtNowNewsCnt {
     @include mi.marginPercent(375, 8, 0, 0, 0);
-    @include mi.fontSizePc(10);
+    @include mi.fontSizePc(12);
     @include mi.letterSpacing(0);
     line-height: 1.25;
 }
@@ -92,18 +92,18 @@ LAYOUT
 .dateTopNewsLoop {}
 
 .timeTopNewsLoop {
-    @include mi.fontSizePc(10);
+    @include mi.fontSizePc(12);
     @include mi.letterSpacing(0);
 }
 
 .newTopAppivalTop {
-    @include mi.fontSizePc(10);
+    @include mi.fontSizePc(12);
     @include mi.letterSpacing(0);
 }
 
 .catTopNewsLoop {
     @include mi.marginPercent(297, 0, 10, 0, 10);
-    @include mi.fontSizePc(10);
+    @include mi.fontSizePc(12);
     @include mi.letterSpacing(0);
 }
 
