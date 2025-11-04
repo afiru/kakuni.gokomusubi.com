@@ -711,7 +711,7 @@ function send_discord_reservation_notification($Data)
     $bikou      = $Data->get('備考');
 
 
-    $message = bloginfo('name') . "に新規予約が入りました*\n"
+    $message = "新規予約が入りました*\n"
         . "━━━━━━━━━━━━━━\n"
         . "お名前：{$name}\n"
         . "ふりがな：{$kana}\n"
