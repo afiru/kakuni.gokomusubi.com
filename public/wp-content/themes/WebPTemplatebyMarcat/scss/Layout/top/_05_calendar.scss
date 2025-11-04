@@ -52,18 +52,20 @@ LAYOUT
         @include mi.fontSizePc(14);
         width: 100%;
         table-layout: fixed;
+        border-collapse: collapse;
 
         th,
         td {
             @include mi.fontSizePc(16);
-            border: 1px solid #000;
+            border: 1px solid #CCC;
             aspect-ratio: 1 / 1;
-            height: 50px;
-            @include mi.paddingPercent(355, 8, 8, 8, 8);
+            height: 70px;
+            @include mi.paddingPercent(355, 4, 4, 4, 4);
+            @include mi.fontSizePc(12);
 
             img {
                 @include mi.marginPercent(50.7142857143, 4, auto, 0, auto);
-                width: 60%;
+                width: 80%;
             }
 
             p {
@@ -77,6 +79,12 @@ LAYOUT
         th {
             vertical-align: middle;
             font-weight: 700;
+            @include mi.fontSizePc(16);
+            height: 50px;
+        }
+
+        td {
+            @include mi.fontSizePc(12);
         }
 
         .sun,

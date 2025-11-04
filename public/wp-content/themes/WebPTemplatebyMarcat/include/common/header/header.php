@@ -107,9 +107,9 @@
   <script src="//unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script type='text/javascript' src="<?php echo get_bloginfo('template_url'); ?>/js/animsition.min.js?ver=<?php echo date('Y-m-d'); ?>"></script>
-  <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/config.js?ver=<?php echo date('Y-m-d'); ?>'> </script>
-  <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/bxslider_setting.js?ver=<?php echo date('Y-m-d'); ?>'> </script>
+  <script type='text/javascript' src="<?php echo get_bloginfo('template_url'); ?>/js/animsition.min.js?ver=<?php echo date('Y-m-dHis'); ?>"></script>
+  <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/config.js?ver=<?php echo date('Y-m-dHis'); ?>'> </script>
+  <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/bxslider_setting.js?ver=<?php echo date('Y-m-dHis'); ?>'> </script>
   <link rel="stylesheet" href="//unpkg.com/lenis@1.2.3/dist/lenis.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -118,7 +118,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=kaisei+Decol:wght@400;500;700&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" id='def_set_css' type="text/css" href="<?php echo get_bloginfo('template_url'); ?>/css/common.css?ver=<?php echo date('Y-m-d'); ?>" media="all">
+  <link rel="stylesheet" id='def_set_css' type="text/css" href="<?php echo get_bloginfo('template_url'); ?>/css/common.css?ver=<?php echo date('Y-m-dHis'); ?>" media="all">
 </head>
 
 <body id="body">
