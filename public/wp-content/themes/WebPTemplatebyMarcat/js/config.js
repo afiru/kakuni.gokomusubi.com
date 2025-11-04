@@ -156,3 +156,30 @@ $(function () {
         setRestCnt();
     }
 });
+
+$(function () {
+   $('#date').datepicker({
+        dateFormat: 'yy年mm月dd日',
+        beforeShowDay: function (date) {
+            //水曜(3)または木曜(4)のとき
+            if (date.getDay() == 3 || date.getDay() == 4) {
+                return [false, "ui-state-disabled"];
+            } else {
+                return [true, ""];
+            }
+        }
+    });
+    $("#date").on("change", function () {
+        //内容を取得
+        let val = $(this).val();
+        //整形
+        let date = new Date(val);
+        //土日のとき
+        if (date.getDay() == 3 || date.getDay() == 4) {
+            //アラート
+            alert("その日は選択できません｡");
+            //inputを空に
+            $(this).val("");
+        }
+    });
+});

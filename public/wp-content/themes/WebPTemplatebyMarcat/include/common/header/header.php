@@ -91,13 +91,19 @@
     var calendar_m = "<?php echo date('m'); ?>";
   </script>
   <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
   <script src="//unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script type='text/javascript' src="<?php echo get_bloginfo('template_url'); ?>/js/animsition.min.js?ver=<?php echo date('Y-m-d'); ?>"></script>
   <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/config.js?ver=<?php echo date('Y-m-d'); ?>'> </script>
   <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/bxslider_setting.js?ver=<?php echo date('Y-m-d'); ?>'> </script>
-  <link rel="stylesheet" href="unpkg.com/lenis@1.2.3/dist/lenis.css">
+  <link rel="stylesheet" href="//unpkg.com/lenis@1.2.3/dist/lenis.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=kaisei+Decol:wght@400;500;700&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
