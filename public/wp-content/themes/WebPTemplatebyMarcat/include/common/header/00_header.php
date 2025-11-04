@@ -82,6 +82,20 @@ if (is_home() or is_front_page()) {
             </li>
 
             <li class="liNavHeaderBase">
+                <a class="d_flex j_between ali_center undernone btnNavHeaderBase" href="<?php echo $homeurl; ?>#booking">
+                    <section class="secNavHeaderBase">
+                        <h2 class="cl_fff kaisei fw_500 h2NavHeaderBase">ご予約</h2>
+                        <p class="cl_fff fw_500 rubyNavHeaderBase">booking</p>
+                    </section>
+                    <figure class="iconNavHeaderBase">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5289 6.52858C10.2373 6.23705 9.76417 6.23821 9.47397 6.53118C9.18585 6.82205 9.18678 7.29103 9.47605 7.58076L13.2392 11.3499C13.6291 11.7405 13.6289 12.3732 13.2386 12.7635L9.50212 16.5C9.22598 16.7761 9.22598 17.2239 9.50212 17.5C9.77827 17.7761 10.226 17.7761 10.5021 17.5L15.2949 12.7072C15.6855 12.3167 15.6854 11.6834 15.2948 11.2929L10.5289 6.52858Z" fill="white" />
+                        </svg>
+                    </figure>
+                </a>
+            </li>
+
+            <li class="liNavHeaderBase">
                 <a class="d_flex j_between ali_center undernone btnNavHeaderBase" href="<?php echo $homeurl; ?>#access">
                     <section class="secNavHeaderBase">
                         <h2 class="cl_fff kaisei fw_500 h2NavHeaderBase">アクセス</h2>
