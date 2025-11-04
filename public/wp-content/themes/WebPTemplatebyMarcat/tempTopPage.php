@@ -14,9 +14,10 @@
         <?php get_template_part('include/layouts/top/04_floor'); ?>
         <?php get_template_part('include/layouts/top/05_calendar'); ?>
         <?php get_template_part('include/layouts/top/06_price'); ?>
+        <?php get_template_part('include/layouts/top/07_instagram'); ?>
         <?php get_template_part('include/layouts/top/99_booking'); ?>
     <?php endwhile;  ?>
-    <?php get_template_part('include/layouts/top/07_instagram'); ?>
+
 
     <?php get_template_part('include/layouts/top/08_access'); ?>
 </main>
