@@ -136,10 +136,6 @@ $(function () {
             <p class="cl_fff fw_400 txtliNowNewsCnt">' + counterText + '</p>\n\
             </li>\n\
             <li class="d_flex j_start ali_center liNowNewsCnt">\n\
-            <h3 class="cl_fff fw_600 h3liNowNewsCnt">2人テーブル：</h3>\n\
-            <p class="cl_fff fw_400 txtliNowNewsCnt">' + table2Text + '</p>\n\
-            </li>\n\
-            <li class="d_flex j_start ali_center liNowNewsCnt">\n\
             <h3 class="cl_fff fw_600 h3liNowNewsCnt">4人テーブル：</h3>\n\
             <p class="cl_fff fw_400 txtliNowNewsCnt">' + table4Text + '</p>\n\
             </li>\n\
@@ -159,24 +155,24 @@ $(function () {
 
 $(function () {
 
-   $('#date').datepicker({
-       beforeShowDay: function (date) {
-		//定休日の中に､選ばれた日付が含まれているとき
-		if (holiday.indexOf(formatDay(date)) !== -1) {
-			return [false, "ui-state-disabled"];
-		}else{
-			return [true, ""];
-		}
-	}
+    $('#date').datepicker({
+        beforeShowDay: function (date) {
+            //定休日の中に､選ばれた日付が含まれているとき
+            if (holiday.indexOf(formatDay(date)) !== -1) {
+                return [false, "ui-state-disabled"];
+            } else {
+                return [true, ""];
+            }
+        }
     });
     $("#date").on("change", function () {
         console.log(holiday);
-       //内容を取得
+        //内容を取得
         let val = $(this).val();
         //整形
         let date = new Date(val);
         //定休日の中に､選ばれた日付が含まれているとき
-        if(holiday.indexOf(formatDay(date)) !== -1){
+        if (holiday.indexOf(formatDay(date)) !== -1) {
             //アラート
             alert("その日は選択できません｡");
             //inputを空に
@@ -185,7 +181,7 @@ $(function () {
     });
 
     function formatDay(dt) {
-        var m = ('0' + (dt.getMonth()+1)).slice(-2);
+        var m = ('0' + (dt.getMonth() + 1)).slice(-2);
         var d = ('0' + dt.getDate()).slice(-2);
         return (m + d);
     }
