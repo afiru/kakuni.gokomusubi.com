@@ -89,6 +89,16 @@
     var rest_url = "<?php echo home_url('/wp-json/wp/v2/'); ?>";
     var calendar_y = "<?php echo date('Y'); ?>";
     var calendar_m = "<?php echo date('m'); ?>";
+    /*
+        <?php foreach (scf::get('eventdates', 226) as $fields): ?>
+            <?php $result[] = '"' . date("md", strtotime($fields['eventdate'])) . '"'; ?>
+        <?php endforeach; ?>
+        */
+    <?php if (!empty($result[0])): ?>
+      var holiday = [<?php echo implode(',', $result); ?>];
+    <?php else: ?>
+      var holiday = [""];
+    <?php endif; ?>
   </script>
   <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
   <script src="//unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>

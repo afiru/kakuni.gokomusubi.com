@@ -129,7 +129,7 @@ $(function () {
             <h2 class="t_center cl_fff fw_700 h2NowNewsCnt">今日のおすすめメニュー</h2>\n\
             <p class="t_center cl_fff fw_400 txtNowNewsCntTop">' + nl2br(results['menu']) + '</p>\n\
             <h2 class="t_center cl_fff fw_700 h2NowNewsCnt h2NowNewsCnt02">現在のお店の状況</h2>\n\
-            <time class="d_block t_center cl_fff fw_400 txtNowNewsCnt">' + results['menu'] + '</time>\n\
+            <time class="d_block t_center cl_fff fw_400 txtNowNewsCnt">' + results['updated'] + '現在　' + results['status'] + 'です！</time>\n\
             <ul class="d_flex j_center ali_center ulNowNewsCnt">\n\
             <li class="d_flex j_start ali_center liNowNewsCnt">\n\
             <h3 class="cl_fff fw_600 h3liNowNewsCnt">カウンター：</h3>\n\
