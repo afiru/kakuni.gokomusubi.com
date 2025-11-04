@@ -158,28 +158,35 @@ $(function () {
 });
 
 $(function () {
+
    $('#date').datepicker({
-        dateFormat: 'yy年mm月dd日',
-        beforeShowDay: function (date) {
-            //水曜(3)または木曜(4)のとき
-            if (date.getDay() == 3 || date.getDay() == 4) {
-                return [false, "ui-state-disabled"];
-            } else {
-                return [true, ""];
-            }
-        }
+       beforeShowDay: function (date) {
+		//定休日の中に､選ばれた日付が含まれているとき
+		if (holiday.indexOf(formatDay(date)) !== -1) {
+			return [false, "ui-state-disabled"];
+		}else{
+			return [true, ""];
+		}
+	}
     });
     $("#date").on("change", function () {
-        //内容を取得
+        console.log(holiday);
+       //内容を取得
         let val = $(this).val();
         //整形
         let date = new Date(val);
-        //土日のとき
-        if (date.getDay() == 3 || date.getDay() == 4) {
+        //定休日の中に､選ばれた日付が含まれているとき
+        if(holiday.indexOf(formatDay(date)) !== -1){
             //アラート
             alert("その日は選択できません｡");
             //inputを空に
             $(this).val("");
         }
     });
+
+    function formatDay(dt) {
+        var m = ('0' + (dt.getMonth()+1)).slice(-2);
+        var d = ('0' + dt.getDate()).slice(-2);
+        return (m + d);
+    }
 });

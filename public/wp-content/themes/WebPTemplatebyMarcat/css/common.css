@@ -3924,6 +3924,7 @@ LAYOUT
   font-size: 11px;
   line-height: 1.5;
   letter-spacing: 0em;
+  text-align: center;
 }
 @media screen and (max-width: 1199px) {
   .txtBooking {
@@ -3972,6 +3973,9 @@ LAYOUT
   color: #FFF;
   border: 1px solid #000;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .btnToTopLxn {

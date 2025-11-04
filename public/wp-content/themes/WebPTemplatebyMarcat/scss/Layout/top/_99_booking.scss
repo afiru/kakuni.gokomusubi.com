@@ -157,6 +157,7 @@ LAYOUT
      @include mi.fontSizePc(11);
      line-height: 1.5;
     letter-spacing: 0em;
+    text-align: center;
 }
 
 .toTopLxn{
@@ -174,4 +175,7 @@ LAYOUT
     color: #FFF;
     border: 1px solid #000;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
