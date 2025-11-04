@@ -333,7 +333,7 @@ add_action('wp_head', function () {
 });
 
 
-//カレンダー
+//カレンダー（ここから今回追加）
 add_action('init', 'calendar_init');
 function calendar_init()
 {
@@ -694,3 +694,48 @@ add_shortcode('gokomusubi_status_auto', function () {
 <?php
     return ob_get_clean();
 });
+
+
+//予約フォーム用
+function send_discord_reservation_notification($Data)
+{
+
+    $name        = $Data->get('お名前');
+    $kana        = $Data->get('ふりがな');
+    $phone       = $Data->get('電話番号');
+    $lineid       = $Data->get('ラインID');
+    $date        = $Data->get('予約日');
+    $time        = $Data->get('予約時間');
+    $int        = $Data->get('予約人数');
+    $mail        = $Data->get('メールアドレス');
+    $bikou      = $Data->get('備考');
+
+
+    $message = "新規予約が入りました*\n"
+        . "━━━━━━━━━━━━━━\n"
+        . "お名前：{$name}\n"
+        . "ふりがな：{$kana}\n"
+        . "電話番号：{$phone} 名\n"
+        . "ラインID：{$lineid}\n"
+        . "予約日：{$date}\n"
+        . "予約時間：{$time}\n"
+        . "予約人数：{$phone}\n"
+        . "人数：{$int} 名\n"
+        . "メールアドレス：{$mail}\n"
+        . "備考：\n{$bikou}\n"
+        . "━━━━━━━━━━━━━━";
+
+    $payload = json_encode(['content' => $message], JSON_UNESCAPED_UNICODE);
+
+    $args = [
+        'body'    => $payload,
+        'headers' => [
+            'Content-Type' => 'application/json',
+        ],
+    ];
+
+    foreach (scf::get('discodeids', 228) as $fields):
+        wp_remote_post($fields['discodeid'], $args);
+    endforeach;
+}
+add_action('mwform_after_send_mw-wp-form-228', 'send_discord_reservation_notification', 10, 1);

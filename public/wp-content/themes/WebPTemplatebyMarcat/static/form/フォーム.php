@@ -28,6 +28,13 @@
     </li>
 
     <li class="d_flex j_between liFormCnt">
+        <h3 class="cl_000 fw_600 h3liFormCnt">メールアドレス</h3>
+        <div class="formInputCnt">
+            [mwform_email name="メールアドレス" id="mail" class="inputW100" size="60"]
+        </div>
+    </li>
+
+    <li class="d_flex j_between liFormCnt">
         <h3 class="cl_000 fw_600 h3liFormCnt">予約日</h3>
         <div class="formInputCnt">
             [mwform_text name="予約日" class="inputW100" id="date" required="true"]
@@ -49,14 +56,14 @@
     </li>
 
     <li class="d_flex j_between row liFormCnt">
-        <h3 class="cl_000 fw_600 h3liFormCnt">予約人数</h3>
+        <h3 class="cl_000 fw_600 h3liFormCnt">備考</h3>
         <div class="formInputCnt formInputCnt100">
             [mwform_textarea class="txtw100" name="備考" id="note"]
         </div>
     </li>
 </ul>
 [mwform_hidden name="hp_check" id="hp_check"]
-<div class="btnToConfirmLxn">[mwform_bconfirm class="tj btnToConfirm" value="confirm"]入力内容を確認する[/mwform_bconfirm]</div>
+<div class="btnToConfirmLxn">[mwform_bconfirm class="btnToConfirm" value="confirm"]入力内容を確認する[/mwform_bconfirm]</div>
 <div class="toThankBackLxn">
     <ul class="d_flex j_between ali_center row toThankBackFx">
         <li class="btnBackLxn">[mwform_bback class="d_flex j_center ali_center fw_500 bg_2F99F0 cl_fff btnBack" value="back"]入力画面にもどる[/mwform_bback]</li>
