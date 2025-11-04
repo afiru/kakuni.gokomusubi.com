@@ -703,7 +703,6 @@ function send_discord_reservation_notification($Data)
     $name        = $Data->get('お名前');
     $kana        = $Data->get('ふりがな');
     $phone       = $Data->get('電話番号');
-    $lineid       = $Data->get('ラインID');
     $date        = $Data->get('予約日');
     $time        = $Data->get('予約時間');
     $int        = $Data->get('予約人数');
