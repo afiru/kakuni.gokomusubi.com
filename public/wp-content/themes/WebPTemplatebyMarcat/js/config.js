@@ -65,7 +65,7 @@ $(function () {
 
 });
 
-
+//カレンダー
 parseInt(calendar_y);
 parseInt(calendar_m);
 get_calendar(calendar_y, calendar_m);
@@ -103,3 +103,56 @@ function get_calendar(calendar_y, calendar_m) {
         $('.js_main_sidebar_eventcalendar').empty().append(results.html);
     });
 }
+
+//緊急お知らせ
+$(function () {
+    let counterText;
+    let table2Text;
+    let table4Text;
+
+    function nl2br(str) {
+        if (!str) return "";
+        return String(str).replace(/\r\n|\r|\n/g, "<br>");
+    }
+    //初期
+    setRestCnt();
+
+    function setRestCnt() {
+        $('.jsnowNewsCnt').empty();
+        nowurl = home_url + '/wp-json/gokomusubi/v1/status';
+
+        $.getJSON(nowurl, function (results) {
+            counterText = results.counter == 0 ? "満席" : `残り<span class="fw_700">${results.counter}</span>席`;
+            table2Text = results.table2 == 0 ? "満席" : `残り<span class="fw_700">${results.table2}</span>卓`;
+            table4Text = results.table4 == 0 ? "満席" : `残り<span class="fw_700">${results.table4}</span>卓`;
+            $('.jsnowNewsCnt').append('\
+            <h2 class="t_center cl_fff fw_700 h2NowNewsCnt">今日のおすすめメニュー</h2>\n\
+            <p class="t_center cl_fff fw_400 txtNowNewsCntTop">' + nl2br(results['menu']) + '</p>\n\
+            <h2 class="t_center cl_fff fw_700 h2NowNewsCnt h2NowNewsCnt02">現在のお店の状況</h2>\n\
+            <time class="d_block t_center cl_fff fw_400 txtNowNewsCnt">' + results['menu'] + '</time>\n\
+            <ul class="d_flex j_center ali_center ulNowNewsCnt">\n\
+            <li class="d_flex j_start ali_center liNowNewsCnt">\n\
+            <h3 class="cl_fff fw_600 h3liNowNewsCnt">カウンター：</h3>\n\
+            <p class="cl_fff fw_400 txtliNowNewsCnt">' + counterText + '</p>\n\
+            </li>\n\
+            <li class="d_flex j_start ali_center liNowNewsCnt">\n\
+            <h3 class="cl_fff fw_600 h3liNowNewsCnt">2人テーブル：</h3>\n\
+            <p class="cl_fff fw_400 txtliNowNewsCnt">' + table2Text + '</p>\n\
+            </li>\n\
+            <li class="d_flex j_start ali_center liNowNewsCnt">\n\
+            <h3 class="cl_fff fw_600 h3liNowNewsCnt">4人テーブル：</h3>\n\
+            <p class="cl_fff fw_400 txtliNowNewsCnt">' + table4Text + '</p>\n\
+            </li>\n\
+            </ul>\n\
+            ');
+        });
+    }
+
+    setInterval(function () {
+        setNowNews();
+    }, 30000);
+
+    function setNowNews() {
+        setRestCnt();
+    }
+});

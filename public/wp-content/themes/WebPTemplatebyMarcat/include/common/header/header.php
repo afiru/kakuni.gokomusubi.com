@@ -90,7 +90,7 @@
     var calendar_y = "<?php echo date('Y'); ?>";
     var calendar_m = "<?php echo date('m'); ?>";
   </script>
-  <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
   <script src="//unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

@@ -6,6 +6,59 @@ use＆nameSpace
 /* ==========================================================================
 LAYOUT
 ========================================================================== */
+.nowNewsCnt {
+    @include mi.paddingPercent(375, 24, 0, 24, 0);
+}
+
+.h2NowNewsCnt {
+    @include mi.fontSizePc(16);
+    @include mi.letterSpacing(0);
+    line-height: 1.25;
+}
+
+.txtNowNewsCntTop {
+    @include mi.marginPercent(375, 12, 0, 0, 0);
+    @include mi.fontSizePc(14);
+    @include mi.letterSpacing(0);
+    line-height: 1.25;
+}
+
+.h2NowNewsCnt02 {
+    @include mi.marginPercent(375, 24, 0, 0, 0);
+}
+
+.ulNowNewsCnt {
+    @include mi.marginPercent(375, 12, auto, 0, auto);
+    @include mi.ontenerWidth(375, 345);
+}
+
+.liNowNewsCnt {
+    &:nth-child(n+2) {
+        @include mi.marginPercent(345, 0, 0, 0, 15);
+    }
+}
+
+.h3liNowNewsCnt {
+    @include mi.fontSizePc(10);
+    @include mi.letterSpacing(0);
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.txtliNowNewsCnt {
+    @include mi.fontSizePc(10);
+    @include mi.letterSpacing(0);
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.txtNowNewsCnt {
+    @include mi.marginPercent(375, 8, 0, 0, 0);
+    @include mi.fontSizePc(10);
+    @include mi.letterSpacing(0);
+    line-height: 1.25;
+}
+
 .topNews {
 
     @include mi.ontenerWidth(375, 354);

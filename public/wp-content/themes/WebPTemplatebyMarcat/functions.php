@@ -384,7 +384,6 @@ function create_calendar_taxonomy()
 }
 add_action('init', 'create_calendar_taxonomy');
 
-
 class MarcatCalendarsAPI
 {
     private $year;
@@ -550,3 +549,148 @@ class MarcatCalendarsAPI
     }
 }
 $MarcatCalendarsAPI = new MarcatCalendarsAPI();
+
+//緊急なおしらせ
+// ------------------------------
+// ダッシュボードウィジェット
+// ------------------------------
+add_action('wp_dashboard_setup', function () {
+    wp_add_dashboard_widget(
+        'gokomusubi_status_widget',
+        '今日の店舗ステータス',
+        'gokomusubi_status_widget_render'
+    );
+});
+
+function gokomusubi_status_widget_render()
+{
+    if (!current_user_can('manage_options')) {
+        echo '権限がありません';
+        return;
+    }
+
+    // 保存処理
+    if (isset($_POST['gokomusubi_status_nonce']) && wp_verify_nonce($_POST['gokomusubi_status_nonce'], 'gokomusubi_status_save')) {
+        $menu = sanitize_textarea_field($_POST['gokomusubi_menu'] ?? '');
+        $status = sanitize_text_field($_POST['gokomusubi_open_status'] ?? '開店中');
+        $counter = intval($_POST['gokomusubi_counter'] ?? 0);
+        $table2 = intval($_POST['gokomusubi_table2'] ?? 0);
+        $table4 = intval($_POST['gokomusubi_table4'] ?? 0);
+        $updated = current_time('mysql');
+
+        update_option('gokomusubi_status', [
+            'menu' => $menu,
+            'status' => $status,
+            'counter' => $counter,
+            'table2' => $table2,
+            'table4' => $table4,
+            'updated' => $updated
+        ]);
+
+        echo '<div class="updated notice"><p>保存しました</p></div>';
+    }
+
+    // 現在値取得
+    $data = get_option('gokomusubi_status', [
+        'menu' => '',
+        'status' => '開店中',
+        'counter' => 0,
+        'table2' => 0,
+        'table4' => 0,
+        'updated' => ''
+    ]);
+
+?>
+    <form method="post">
+        <?php wp_nonce_field('gokomusubi_status_save', 'gokomusubi_status_nonce'); ?>
+        <p>
+            <label>今日のおすすめメニュー:<br>
+                <textarea name="gokomusubi_menu" rows="4" style="width:100%;"><?php echo esc_textarea($data['menu']); ?></textarea>
+            </label>
+        </p>
+        <p>
+            <label>ステータス:<br>
+                <select name="gokomusubi_open_status">
+                    <?php
+                    $statuses = ['開店中', 'もうすぐ閉店', '閉店'];
+                    foreach ($statuses as $s) {
+                        $selected = ($data['status'] === $s) ? 'selected' : '';
+                        echo "<option value='$s' $selected>$s</option>";
+                    }
+                    ?>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label>カウンター席:<br>
+                <input type="number" name="gokomusubi_counter" value="<?php echo intval($data['counter']); ?>">
+            </label>
+        </p>
+        <p>
+            <label>2人テーブル席:<br>
+                <input type="number" name="gokomusubi_table2" value="<?php echo intval($data['table2']); ?>">
+            </label>
+        </p>
+        <p>
+            <label>4人テーブル席:<br>
+                <input type="number" name="gokomusubi_table4" value="<?php echo intval($data['table4']); ?>">
+            </label>
+        </p>
+        <p>
+            <input type="submit" class="button-primary" value="保存">
+        </p>
+    </form>
+    <p>最終更新: <?php echo esc_html($data['updated']); ?></p>
+<?php
+}
+
+// ------------------------------
+// REST API
+// ------------------------------
+add_action('rest_api_init', function () {
+    register_rest_route('gokomusubi/v1', '/status', [
+        'methods' => 'GET',
+        'callback' => function () {
+            return get_option('gokomusubi_status', [
+                'menu' => '',
+                'status' => '開店中',
+                'counter' => 0,
+                'table2' => 0,
+                'table4' => 0,
+                'updated' => ''
+            ]);
+        },
+        'permission_callback' => '__return_true'
+    ]);
+});
+
+// ------------------------------
+// ショートコード（自動更新表示）
+// ------------------------------
+add_shortcode('gokomusubi_status_auto', function () {
+    ob_start();
+?>
+    <div id="gokomusubi-status">読み込み中...</div>
+    <script>
+        async function updateStatus() {
+            try {
+                const res = await fetch('/wp-json/gokomusubi/v1/status');
+                const data = await res.json();
+                document.getElementById('gokomusubi-status').innerHTML = `
+                <strong>おすすめメニュー:</strong><br>${data.menu.replace(/\n/g,'<br>')}<br>
+                <strong>ステータス:</strong> ${data.status}<br>
+                <strong>カウンター席:</strong> ${data.counter}席<br>
+                <strong>2人テーブル席:</strong> ${data.table2}卓<br>
+                <strong>4人テーブル席:</strong> ${data.table4}卓<br>
+                <em>最終更新: ${data.updated}</em>
+            `;
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        updateStatus();
+        setInterval(updateStatus, 60000); // 60秒ごとに更新
+    </script>
+<?php
+    return ob_get_clean();
+});
