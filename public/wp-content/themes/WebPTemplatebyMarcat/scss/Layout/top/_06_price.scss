@@ -73,21 +73,21 @@ LAYOUT
 
 .h4PriceCnt {
     @include mi.ontenerWidth(254, 98);
-    @include mi.fontSizePc(11);
+    @include mi.fontSizePc(12);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(50);
 }
 
 .dottoPriceCnt {
     @include mi.ontenerWidth(254, 16);
-    @include mi.fontSizePc(11);
+    @include mi.fontSizePc(12);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(50);
 }
 
 .txtPriceCnt {
     @include mi.ontenerWidth(254, 135);
-    @include mi.fontSizePc(11);
+    @include mi.fontSizePc(12);
     @include mi.lineheight(10, 15);
     @include mi.letterSpacing(50);
 }

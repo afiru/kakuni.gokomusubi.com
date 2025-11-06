@@ -2679,7 +2679,7 @@ LAYOUT
 
 .h4PriceCnt {
   width: 98px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.05em;
   text-indent: -0.05em;
@@ -2691,7 +2691,7 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .h4PriceCnt {
-    font-size: 2.9333333333vw;
+    font-size: 3.2vw;
   }
 }
 .h4PriceCnt::before {
@@ -2711,7 +2711,7 @@ LAYOUT
 
 .dottoPriceCnt {
   width: 16px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.05em;
   text-indent: -0.05em;
@@ -2723,7 +2723,7 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .dottoPriceCnt {
-    font-size: 2.9333333333vw;
+    font-size: 3.2vw;
   }
 }
 .dottoPriceCnt::before {
@@ -2743,7 +2743,7 @@ LAYOUT
 
 .txtPriceCnt {
   width: 135px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.05em;
   text-indent: -0.05em;
@@ -2755,7 +2755,7 @@ LAYOUT
 }
 @media screen and (max-width: 767px) {
   .txtPriceCnt {
-    font-size: 2.9333333333vw;
+    font-size: 3.2vw;
   }
 }
 .txtPriceCnt::before {
